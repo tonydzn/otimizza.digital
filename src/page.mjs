@@ -77,16 +77,16 @@ function flow() {
 
 function painel() {
   const blocos = [
-    ['pedidos-desktop.jpg', 1800, 1125, 'Quadro de pedidos do painel com as colunas Novos, Em preparo, Prontos e na rua e Finalizados.',
+    ['pedidos-desktop.jpg', 1800, 1052, 'Quadro de pedidos do painel com as colunas Novos, Em preparo, Prontos e na rua e Finalizados.',
       'O pedido chega pronto para a cozinha', 'Cada pedido confirmado no WhatsApp aparece aqui com alarme sonoro: itens, observações em destaque, endereço, pagamento e troco. Um toque passa de “novo” para “em preparo”, “saiu” e “entregue”, e o cliente recebe aviso a cada etapa.',
       ['Alarme que só para quando alguém dá ciência', 'Arraste o cartão entre colunas no computador', 'Comanda para imprimir em um clique']],
-    ['cozinha-desktop.jpg', 1800, 1125, 'Modo cozinha em tela cheia, com pedidos novos e em preparo em letras grandes.',
+    ['cozinha-desktop.jpg', 1800, 610, 'Modo cozinha em tela cheia, com pedidos novos e em preparo em letras grandes.',
       'Modo cozinha para o tablet da chapa', 'Tela cheia, letras grandes, só o que importa: o que entrou, o que está no fogo e as observações do cliente em vermelho. Um botão para aceitar, outro para avisar que ficou pronto.',
       ['Pedido parado fica vermelho e pisca', 'Mantém o tablet aceso', 'Atualiza sozinho a cada 5 segundos']],
-    ['atendimento-desktop.jpg', 1800, 1125, 'Caixa de entrada de atendimento: lista de conversas, chat com o cliente e ficha do cliente ao lado.',
+    ['atendimento-desktop.jpg', 1703, 1800, 'Caixa de entrada de atendimento: lista de conversas, chat com o cliente e ficha do cliente ao lado.',
       'Quando a IA chama você, está tudo à mão', 'O cliente pediu uma pessoa ou perguntou algo que a IA não sabe? Você recebe um aviso, abre a conversa com o histórico completo e responde pelo painel como o restaurante. Ao lado, pedidos anteriores, endereço e notas internas.',
       ['A IA pausa sozinha enquanto você responde', 'Perguntas sem resposta viram conhecimento da IA em um clique', 'Ficha do cliente com gasto, ticket médio e favoritos']],
-    ['cardapio-desktop.jpg', 1800, 1125, 'Cadastro do cardápio em cartões com foto, preço e interruptor de disponível.',
+    ['cardapio-desktop.jpg', 1800, 1149, 'Cadastro do cardápio em cartões com foto, preço e interruptor de disponível.',
       'Cardápio com fotos, que a IA envia na conversa', 'Itens, tamanhos, adicionais e fotos. Marcou “esgotado”, a IA para de oferecer na hora. Quando o cliente pede um item, a foto vai junto com nome e preço.',
       ['Edição em janela, sem sair da página', 'Apelidos: “xbacon”, “x bacon” e “bacon” acham o item', 'Cardápio do dia por dia da semana']],
   ];
@@ -98,7 +98,7 @@ function painel() {
   const extras = [['Entende áudio', 'Cliente mandou áudio? A IA transcreve e anota o pedido do mesmo jeito.'], ['Integra com o seu sistema', 'Pedidos enviados ao PDV ou ERP pelo padrão Open Delivery (Abrasel) ou por webhook.'], ['Resumo no fim do dia', 'Pedidos, faturamento, mais vendidos e perguntas sem resposta, no WhatsApp do dono.']];
   return `<section class="ci-painel" id="painel"><div class="container"><div class="ci-heading"><h2>A conversa é no WhatsApp.<br><span>A operação é aqui.</span></h2><p>O painel abre no celular, no tablet da cozinha ou no computador. Nada para instalar. Estas são telas reais do sistema, com um restaurante de demonstração.</p></div>
 <div class="ci-shots">${blocos.map(([img, w, h, alt, t, d, pts], i) => `<article class="ci-shot${i % 2 ? ' ci-shot-rev' : ''}"><figure class="ci-shot-img"><img src="/assets/screens/${img}" width="${w}" height="${h}" alt="${escape(alt)}" loading="lazy" decoding="async"></figure><div class="ci-shot-copy"><h3>${t}</h3><p>${d}</p><ul>${pts.map(p => `<li>${check}<span>${p}</span></li>`).join('')}</ul></div></article>`).join('')}</div>
-<ul class="ci-phones">${phones.map(([img, alt, t, d]) => `<li><figure class="ci-phone-frame"><img src="/assets/screens/${img}" width="1100" height="2380" alt="${escape(alt)}" loading="lazy" decoding="async"></figure><h3>${t}</h3><p>${d}</p></li>`).join('')}</ul>
+<ul class="ci-phones">${phones.map(([img, alt, t, d]) => `<li><figure class="ci-phone-frame"><img src="/assets/screens/${img}" width="513" height="1000" alt="${escape(alt)}" loading="lazy" decoding="async"></figure><h3>${t}</h3><p>${d}</p></li>`).join('')}</ul>
 <ul class="ci-extras">${extras.map(([t, d]) => `<li><h3>${t}</h3><p>${d}</p></li>`).join('')}</ul>
 <aside class="ci-demo-card" aria-labelledby="demo-titulo"><div class="ci-demo-copy"><p class="ci-demo-eyebrow">Experimente agora</p><h3 id="demo-titulo">Entre no painel de demonstração</h3><p>É o mesmo restaurante das telas acima: pedidos em andamento, cardápio com fotos, uma conversa esperando atendimento e entregadores. Mexa à vontade, os dados voltam ao padrão toda madrugada.</p></div><dl class="ci-demo-cred"><div><dt>Endereço</dt><dd><a href="https://app.otimizza.digital/login" target="_blank" rel="noopener noreferrer">app.otimizza.digital</a></dd></div><div><dt>E-mail</dt><dd><code>demo@otimizza.digital</code></dd></div><div><dt>Senha</dt><dd><code>demo</code></dd></div></dl><div class="ci-demo-actions"><a class="ci-button ci-button-big" href="https://app.otimizza.digital/login" target="_blank" rel="noopener noreferrer"><span>Abrir a demonstração</span></a><a class="ci-text-link" href="/ajuda/#demo">Como funciona a demonstração ${arrow}</a></div></aside>
 </div></section>`;
