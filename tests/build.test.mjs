@@ -16,3 +16,11 @@ test('O build gera a página do Cardápio IA com preço, WhatsApp e sem referên
   const js = await readFile(new URL('../dist/assets/site.js', import.meta.url), 'utf8');
   assert.ok(js.includes('data-chat'));
 });
+
+test('Google Tag Manager está no head e no body de todas as páginas', async () => {
+  const pages = await build();
+  for (const html of pages.values()) {
+    assert.ok(html.includes("googletagmanager.com/gtm.js?id='+i+dl") && html.includes("'GTM-MBMG5FC8'"));
+    assert.ok(html.includes('googletagmanager.com/ns.html?id=GTM-MBMG5FC8'));
+  }
+});
