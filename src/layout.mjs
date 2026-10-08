@@ -31,8 +31,12 @@ function whatsappFloat() {
 function schema(path, title, description, extra) {
   const org = site.origin + '/#organization';
   const graph = [
-    { '@type': 'Organization', '@id': org, name: site.name, url: site.origin + '/', logo: { '@type': 'ImageObject', url: site.origin + '/assets/logo-otimizza-digital.png' }, email: site.email, telephone: '+' + site.whatsapp, founder: { '@type': 'Person', name: site.owner, url: site.ownerSite + '/sobre/' }, areaServed: 'Presidente Prudente, SP, Brasil' },
-    { '@type': 'WebPage', '@id': site.origin + path, url: site.origin + path, name: title, description, inLanguage: 'pt-BR', isPartOf: { '@type': 'WebSite', url: site.origin + '/', name: site.name, publisher: { '@id': org } } },
+    { '@type': 'Organization', '@id': org, name: site.name, legalName: site.name, url: site.origin + '/', logo: { '@type': 'ImageObject', url: site.origin + '/assets/logo-otimizza-digital.png' }, email: site.email, telephone: '+' + site.whatsapp,
+      address: { '@type': 'PostalAddress', addressLocality: site.cityName, addressRegion: site.region, addressCountry: site.country }, areaServed: [{ '@type': 'City', name: site.cityName }, { '@type': 'Country', name: 'Brasil' }],
+      founder: { '@type': 'Person', name: site.owner, url: site.ownerSite + '/sobre/' }, contactPoint: { '@type': 'ContactPoint', contactType: 'sales', telephone: '+' + site.whatsapp, availableLanguage: 'Portuguese' }, ...(site.sameAs.length ? { sameAs: site.sameAs } : {}) },
+    { '@type': 'WebSite', '@id': site.origin + '/#website', url: site.origin + '/', name: site.name, publisher: { '@id': org }, inLanguage: 'pt-BR' },
+    { '@type': 'WebPage', '@id': site.origin + path, url: site.origin + path, name: title, description, inLanguage: 'pt-BR', dateModified: site.updated, isPartOf: { '@id': site.origin + '/#website' },
+      breadcrumb: { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Início', item: site.origin + '/' }, ...(path !== '/' ? [{ '@type': 'ListItem', position: 2, name: title, item: site.origin + path }] : [])] } },
     ...extra,
   ];
   return JSON.stringify({ '@context': 'https://schema.org', '@graph': graph });

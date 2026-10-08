@@ -275,3 +275,12 @@
 .ci-extras h3{font:500 22px/1.1 var(--display);margin:0 0 6px}
 .ci-extras p{margin:0;font-size:14px;line-height:1.55;color:var(--muted)}
 @media(max-width:960px){.ci-shot{grid-template-columns:1fr}.ci-shot-rev .ci-shot-img{order:0}.ci-shot-copy h3{font-size:27px}.ci-phones{grid-template-columns:1fr;gap:34px}.ci-extras{grid-template-columns:1fr}}
+
+/* definição e fatos (SEO / IA) */
+.ci-def{padding:var(--section) 0;border-top:1px solid var(--line)}
+.ci-def .ci-heading>p{max-width:64ch}
+.ci-facts{margin:34px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 40px}
+.ci-facts div{display:grid;grid-template-columns:130px 1fr;gap:14px;padding:14px 0;border-top:1px solid var(--line)}
+.ci-facts dt{margin:0;font:600 12px/1.5 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--green-text)}
+.ci-facts dd{margin:0;font-size:15px;line-height:1.55}
+@media(max-width:860px){.ci-facts{grid-template-columns:1fr}.ci-facts div{grid-template-columns:110px 1fr}}

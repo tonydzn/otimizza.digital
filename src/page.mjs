@@ -104,6 +104,20 @@ function painel() {
 </div></section>`;
 }
 
+// Bloco de definição: frases diretas e fatos verificáveis, para buscadores e assistentes de IA citarem.
+function definicao() {
+  const fatos = [
+    ['O que é', 'Atendente de WhatsApp com inteligência artificial para restaurantes, lanchonetes, pizzarias, marmitarias e açaiterias.'],
+    ['O que faz', 'Responde na hora, mostra o cardápio com fotos, anota o pedido com total, confirma endereço, previsão e pagamento, avisa a cozinha e passa para uma pessoa quando o cliente pede.'],
+    ['Onde funciona', 'No número de WhatsApp que o restaurante já usa. O cliente não instala nada.'],
+    ['O que vem junto', 'Painel web com pedidos em tempo real, modo cozinha, cardápio com fotos, chat de atendimento, entregadores, cardápio online por link e resumo diário.'],
+    ['Integrações', 'Envio de pedidos ao PDV ou ERP pelo padrão Open Delivery (Abrasel) ou por webhook.'],
+    ['Preço', 'R$ 99 por mês por número de WhatsApp, plano único, sem instalação no balcão.'],
+    ['Quem faz', 'Otimizza Digital, de Presidente Prudente, SP. Atende Presidente Prudente, região e todo o Brasil.'],
+  ];
+  return `<section class="ci-def" id="o-que-e"><div class="container"><div class="ci-heading"><h2>O que é o Cardápio IA,<br><span>em uma frase.</span></h2><p>O Cardápio IA é um atendente de WhatsApp com inteligência artificial que mostra o cardápio, anota pedidos e confirma entrega e pagamento no número do restaurante, com um painel para a cozinha acompanhar tudo. Custa R$ 99 por mês e é feito pela Otimizza Digital, de Presidente Prudente.</p></div><dl class="ci-facts">${fatos.map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join('')}</dl></div></section>`;
+}
+
 function serve() {
   const kinds = [
     ['Lanchonetes', 'Lanches, porções e combos com observação por item.', 'cardapio-lanche-600.jpg', 'Ilustração de um hambúrguer com queijo, alface e tomate.'],
@@ -128,8 +142,7 @@ function pricing() {
   return `<section class="ci-price" id="plano"><div class="container ci-price-grid"><div class="ci-price-card"><p class="ci-price-value"><span class="ci-currency">R$</span><span class="ci-amount">99</span><span class="ci-period">/mês</span></p><p class="ci-price-note">Plano único: um número de WhatsApp e um cardápio. Pagamento mensal.</p>${cta('Quero o Cardápio IA', 'ci-button-big')}<p class="ci-price-foot">O botão abre uma conversa no WhatsApp com a Otimizza Digital. A contratação é combinada por lá.</p></div><div class="ci-price-list"><h2>O que está incluído<br><span>nos R$ 99.</span></h2><ul>${included.map(item => `<li>${check}<span>${item}</span></li>`).join('')}</ul><p class="ci-price-obs">O pagamento do cliente continua acontecendo como hoje: Pix, cartão na entrega ou dinheiro. O Cardápio IA informa e confirma, não processa o pagamento.</p></div></div></section>`;
 }
 
-function faq() {
-  const items = [
+export const faqItems = [
     ['Funciona no número de WhatsApp que eu já uso?', 'Sim. O atendimento é ligado ao número do restaurante. Seus clientes continuam chamando no mesmo contato de sempre.'],
     ['E se o cliente quiser falar com uma pessoa?', 'A IA percebe quando o cliente pede uma pessoa, avisa você e deixa a conversa aberta para a equipe responder. Ninguém fica preso com o robô.'],
     ['Como eu mudo um preço ou tiro um item do cardápio?', 'No painel, pelo celular. Um toque em “esgotado” e a IA para de oferecer o item na hora; preço, foto, tamanhos e adicionais também são editados ali.'],
@@ -138,7 +151,12 @@ function faq() {
     ['Como fica a entrega?', 'Você cadastra seus entregadores no painel. Ao despachar o pedido, o entregador recebe endereço, telefone do cliente e forma de pagamento no WhatsApp, e confirma pelo celular quando pega e quando entrega. O cliente é avisado em cada etapa.'],
     ['A IA pode responder algo errado?', 'Ela responde a partir do cardápio e das regras que você informa. O que não sabe, encaminha para você em vez de inventar. O resumo diário lista essas perguntas para ajustarmos.'],
     ['Tem fidelidade ou taxa de instalação?', 'Essas condições são combinadas na conversa de contratação pelo WhatsApp. O valor do plano é R$ 99 por mês.'],
-  ];
+    ['Atende fora de Presidente Prudente?', 'Sim. O Cardápio IA funciona em qualquer cidade do Brasil, porque tudo acontece no WhatsApp e no painel online. A implantação é feita à distância.'],
+    ['Funciona com iFood ou outros aplicativos de entrega?', 'O Cardápio IA cuida dos pedidos que chegam pelo WhatsApp do restaurante. Pedidos de iFood e similares continuam no sistema deles; se o restaurante usa um PDV que recebe tudo, o Cardápio IA pode enviar os pedidos para esse PDV pelo padrão Open Delivery ou por webhook.'],
+];
+
+function faq() {
+  const items = faqItems;
   return `<section class="ci-faq" id="duvidas"><div class="container ci-faq-grid"><div class="ci-heading"><h2>Perguntas de quem<br><span>está no balcão.</span></h2><p>Não achou a sua? Chama no WhatsApp e pergunta direto.</p>${cta('Tirar uma dúvida')}</div><div class="ci-faq-list">${items.map(([q, a]) => `<details><summary>${q}<span aria-hidden="true">${arrow}</span></summary><p>${a}</p></details>`).join('')}</div></div></section>`;
 }
 
@@ -148,18 +166,19 @@ export function cardapioPage() {
 ${compare()}
 ${flow()}
 ${painel()}
+${definicao()}
 ${serve()}
 ${setup()}
 ${pricing()}
 ${faq()}
 <section class="ci-final"><div class="container"><h2>A próxima noite de rush<br><span>pode ser mais tranquila.</span></h2><p>Chama no WhatsApp, conta como é o seu atendimento hoje e a gente te mostra como o Cardápio IA ficaria no seu restaurante.</p>${cta('Falar com a gente no WhatsApp', 'ci-button-big')}<p class="ci-final-note">Otimizza Digital · Presidente Prudente e região · (18) 98186-8701</p></div></section>
 <div class="ci-sticky" aria-hidden="true"><span><strong>R$ 99</strong>/mês</span>${cta('Quero no meu restaurante')}</div>`;
-  const faqSchema = { '@type': 'FAQPage', mainEntity: [
-    ['Funciona no número de WhatsApp que eu já uso?', 'Sim. O atendimento é ligado ao número do restaurante. Seus clientes continuam chamando no mesmo contato de sempre.'],
-    ['E se o cliente quiser falar com uma pessoa?', 'A IA percebe quando o cliente pede uma pessoa, avisa você e deixa a conversa aberta para a equipe responder.'],
-    ['Como eu mudo um preço ou tiro um item do cardápio?', 'No painel, pelo celular: esgotado, preço, foto, tamanhos e adicionais são editados em um toque.'],
-    ['Meus clientes mandam muito áudio. Funciona?', 'Sim. A IA transcreve o áudio e anota o pedido como se fosse texto.'],
-  ].map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) };
-  const product = { '@type': 'Product', name: 'Cardápio IA', description: 'Cardápio e atendimento automático com inteligência artificial no WhatsApp para restaurantes, lanchonetes e similares.', brand: { '@type': 'Brand', name: 'Otimizza Digital' }, offers: { '@type': 'Offer', price: '99.00', priceCurrency: 'BRL', url: site.origin + '/', availability: 'https://schema.org/InStock', priceSpecification: { '@type': 'UnitPriceSpecification', price: '99.00', priceCurrency: 'BRL', billingIncrement: 1, unitCode: 'MON' } } };
-  return layout({ path: '/', title: 'Cardápio IA: atendimento automático no WhatsApp para restaurantes', description: 'Cardápio com inteligência artificial no WhatsApp do seu restaurante ou lanchonete: responde, anota pedidos e confirma entrega 24h. Plano único de R$ 99/mês.', body, extra: [faqSchema, product] });
+  const faqSchema = { '@type': 'FAQPage', '@id': site.origin + '/#faq', mainEntity: faqItems.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a.replace(/<[^>]+>/g, '') } })) };
+  const oferta = { '@type': 'Offer', price: '99.00', priceCurrency: 'BRL', url: site.origin + '/#plano', availability: 'https://schema.org/InStock', priceSpecification: { '@type': 'UnitPriceSpecification', price: '99.00', priceCurrency: 'BRL', billingIncrement: 1, unitCode: 'MON' }, seller: { '@id': site.origin + '/#organization' } };
+  const app = { '@type': 'SoftwareApplication', '@id': site.origin + '/#cardapio-ia', name: 'Cardápio IA', alternateName: 'Cardapio IA', applicationCategory: 'BusinessApplication', applicationSubCategory: 'Atendimento automático e pedidos pelo WhatsApp para restaurantes', operatingSystem: 'Web, WhatsApp',
+    description: 'Atendente de WhatsApp com inteligência artificial para restaurantes, lanchonetes, pizzarias, marmitarias e açaiterias: responde na hora, mostra o cardápio com fotos, anota pedidos com total, confirma endereço e pagamento, entende áudio e passa para uma pessoa quando o cliente pede. Inclui painel com pedidos em tempo real, modo cozinha, cardápio online, entregadores, resumo diário e integração com PDV por Open Delivery ou webhook.',
+    featureList: ['Atendimento automático 24 h no WhatsApp do restaurante', 'Cardápio com fotos enviado na conversa', 'Anotação de pedidos com total calculado', 'Confirmação de endereço, previsão e pagamento', 'Transcrição de áudio', 'Transferência para atendimento humano com aviso ao dono', 'Painel com pedidos em tempo real e alarme', 'Modo cozinha em tela cheia', 'Cadastro de entregadores com página própria', 'Cardápio online por link', 'Resumo diário por WhatsApp', 'Integração Open Delivery e webhook'],
+    offers: oferta, provider: { '@id': site.origin + '/#organization' }, inLanguage: 'pt-BR', url: site.origin + '/', image: site.origin + '/assets/social-cover.png', screenshot: [site.origin + '/assets/screens/pedidos-desktop.jpg', site.origin + '/assets/screens/cozinha-desktop.jpg', site.origin + '/assets/screens/atendimento-desktop.jpg'] };
+  const product = { '@type': 'Product', name: 'Cardápio IA', description: 'Cardápio e atendimento automático com inteligência artificial no WhatsApp para restaurantes, lanchonetes e similares.', brand: { '@type': 'Brand', name: 'Otimizza Digital' }, offers: oferta };
+  return layout({ path: '/', title: 'Cardápio IA: atendimento automático no WhatsApp para restaurantes', description: 'Cardápio com inteligência artificial no WhatsApp do seu restaurante ou lanchonete: responde, anota pedidos e confirma entrega 24h. Plano único de R$ 99/mês.', body, extra: [faqSchema, app, product] });
 }

@@ -1,5 +1,6 @@
 // Guia passo a passo para o restaurante que acabou de contratar o Cardápio IA.
 import { escape, arrow, layout, whatsappUrl } from './layout.mjs';
+import { site } from './site.mjs';
 
 const PAINEL = 'https://app.otimizza.digital';
 const passos = [
@@ -66,5 +67,7 @@ export function ajudaPage() {
 <h2 class="ci-ajuda-h2">Dicas que evitam dor de cabeça</h2><dl class="ci-ajuda-dicas">${dicas.map(([t, d]) => `<div><dt>${t}</dt><dd>${d}</dd></div>`).join('')}</dl>
 <div class="ci-ajuda-demo" id="demo"><h2>Quer ver antes de cadastrar?</h2><p>Entre no painel de demonstração com um restaurante fictício já montado: pedidos em andamento, cardápio com adicionais, uma conversa esperando atendimento e entregadores. Pode mexer à vontade; os dados voltam ao padrão toda madrugada.</p><p class="ci-ajuda-cred"><span>Endereço: <a href="${PAINEL}/login" target="_blank" rel="noopener noreferrer">app.otimizza.digital</a></span><span>E-mail: <code>demo@otimizza.digital</code></span><span>Senha: <code>demo</code></span></p><p class="ci-ajuda-obs">A demonstração não tem WhatsApp ligado, então as mensagens não saem para ninguém. Para testar a conversa de verdade, chame a gente.</p></div>
 <p class="ci-ajuda-cta"><a class="ci-button ci-button-big" href="${escape(whatsappUrl('Olá! Estou implantando o Cardápio IA e tenho uma dúvida.'))}" target="_blank" rel="noopener noreferrer">Dúvida na implantação? Chama no WhatsApp ${arrow}</a></p></section>`;
-  return layout({ path: '/ajuda/', title: 'Guia de implantação do Cardápio IA', description: 'Passo a passo para colocar o Cardápio IA no ar no seu restaurante: configurações, cardápio, WhatsApp, pedidos, atendimento, entregadores e integração.', body });
+  const howTo = { '@type': 'HowTo', name: 'Como colocar o Cardápio IA no ar no seu restaurante', description: 'Passo a passo de implantação do atendente de WhatsApp com IA da Otimizza Digital.', totalTime: 'PT1H', inLanguage: 'pt-BR',
+    step: passos.map(([t, itens], i) => ({ '@type': 'HowToStep', position: i + 1, name: t, url: `${site.origin}/ajuda/#passo-${i + 1}`, itemListElement: itens.map((x) => ({ '@type': 'HowToDirection', text: x.replace(/<[^>]+>/g, '') })) })) };
+  return layout({ path: '/ajuda/', extra: [howTo], title: 'Guia de implantação do Cardápio IA', description: 'Passo a passo para colocar o Cardápio IA no ar no seu restaurante: configurações, cardápio, WhatsApp, pedidos, atendimento, entregadores e integração.', body });
 }

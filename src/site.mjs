@@ -11,4 +11,9 @@ export const site = {
   whatsappDisplay: '(18) 98186-8701',
   whatsappText: 'Olá! Quero o Cardápio IA no meu restaurante. Pode me explicar como funciona?',
   city: 'Presidente Prudente, SP',
+  cityName: 'Presidente Prudente',
+  region: 'SP',
+  country: 'BR',
+  updated: '2026-10-08',
+  sameAs: [],   // perfis sociais (Instagram, LinkedIn): preencher quando existirem
 };
