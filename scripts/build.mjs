@@ -4,6 +4,7 @@ import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { site } from '../src/site.mjs';
 import { cardapioPage } from '../src/page.mjs';
+import { ajudaPage } from '../src/ajuda.mjs';
 import { notFoundPage, privacyPage } from '../src/layout.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
@@ -13,7 +14,7 @@ export async function build() {
   await rm(out, { recursive: true, force: true });
   await mkdir(out, { recursive: true });
   await cp(resolve(root, 'public'), out, { recursive: true });
-  const pages = new Map([['/', cardapioPage()], ['/privacidade/', privacyPage()]]);
+  const pages = new Map([['/', cardapioPage()], ['/ajuda/', ajudaPage()], ['/privacidade/', privacyPage()]]);
   for (const [path, html] of pages) {
     const dest = resolve(out, '.' + path, 'index.html');
     await mkdir(dirname(dest), { recursive: true });

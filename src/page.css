@@ -218,3 +218,33 @@
 .ci-painel-note{margin:28px 0 0;font-size:16px;line-height:1.6;color:var(--muted);max-width:62ch}
 @media(max-width:960px){.ci-painel-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.ci-painel-grid{grid-template-columns:1fr;gap:12px}.ci-painel-grid h3{font-size:23px}}
+
+/* demonstração e guia */
+.ci-painel-demo{margin:22px 0 0;display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;font-size:14px;color:var(--muted)}
+.ci-painel-demo code,.ci-ajuda-cred code{font:500 14px/1 ui-monospace,SFMono-Regular,Menlo,monospace;background:rgba(255,255,255,.08);padding:3px 7px;border-radius:4px;color:var(--ink)}
+.ci-ajuda h1 span{color:var(--green-text)}
+.ci-ajuda-eyebrow{margin:0 0 10px;font:600 12px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--green-text)}
+.ci-ajuda .ci-lead{max-width:60ch}
+.ci-ajuda-nav ol{list-style:none;margin:26px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.ci-ajuda-nav a{display:inline-block;padding:7px 12px;border:1px solid var(--line);border-radius:999px;font-size:13px;color:var(--muted);text-decoration:none}
+.ci-ajuda-nav a:hover{color:var(--ink);border-color:var(--green-text)}
+.ci-ajuda-steps{list-style:none;margin:40px 0 0;padding:0}
+.ci-ajuda-steps>li{position:relative;padding:28px 0 28px 70px;border-top:1px solid var(--line)}
+.ci-ajuda-steps>li:last-child{border-bottom:1px solid var(--line)}
+.ci-ajuda-num{position:absolute;left:0;top:24px;font:500 46px/1 var(--display);color:var(--green-text);letter-spacing:-.03em}
+.ci-ajuda-steps h2{font:500 28px/1.1 var(--display);margin:0 0 12px}
+.ci-ajuda-steps ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:8px}
+.ci-ajuda-steps li li{font-size:16px;line-height:1.6;color:var(--muted)}
+.ci-ajuda-steps li li strong{color:var(--ink);font-weight:600}
+.ci-ajuda-h2{font:500 32px/1.1 var(--display);margin:56px 0 18px}
+.ci-ajuda-dicas{margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.ci-ajuda-dicas div{border:1px solid var(--line);border-radius:6px;padding:18px}
+.ci-ajuda-dicas dt{font:500 20px/1.2 var(--display);margin:0 0 6px}
+.ci-ajuda-dicas dd{margin:0;font-size:15px;line-height:1.55;color:var(--muted)}
+.ci-ajuda-demo{margin:56px 0 0;padding:28px;border:1px solid var(--green-text);border-radius:8px;background:rgba(31,184,90,.07)}
+.ci-ajuda-demo h2{font:500 30px/1.1 var(--display);margin:0 0 10px}
+.ci-ajuda-demo p{margin:0 0 12px;font-size:16px;line-height:1.6}
+.ci-ajuda-cred{display:flex;flex-wrap:wrap;gap:10px 22px}
+.ci-ajuda-obs{font-size:14px;color:var(--muted)}
+.ci-ajuda-cta{margin:40px 0 0}
+@media(max-width:700px){.ci-ajuda-steps>li{padding-left:0;padding-top:64px}.ci-ajuda-num{top:18px}.ci-ajuda-dicas{grid-template-columns:1fr}}
