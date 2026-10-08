@@ -75,6 +75,19 @@ function flow() {
   return `<section class="ci-flow" id="como-funciona"><div class="container"><div class="ci-heading"><h2>O que a IA faz<br><span>dentro da conversa.</span></h2><p>Nada de aplicativo novo para o cliente baixar. Tudo acontece no WhatsApp que ele já usa, no número do seu restaurante.</p></div><ol class="ci-flow-list">${steps.map(([title, text, img, w, h, alt, q, a], i) => `<li class="ci-step${img ? '' : ' ci-step-chat'}"><div class="ci-step-visual">${img ? `<img src="${img}" width="${w}" height="${h}" alt="${escape(alt)}" loading="lazy" decoding="async">` : ''}<div class="ci-mini-chat" aria-label="Exemplo de conversa simulada"><p class="ci-msg ci-msg-in">${q}</p><p class="ci-msg ci-msg-out">${a}</p><small>exemplo simulado</small></div></div><div class="ci-step-copy"><span class="ci-step-num" aria-hidden="true">${i + 1}</span><h3>${title}</h3><p>${text}</p></div></li>`).join('')}</ol></div></section>`;
 }
 
+function painel() {
+  const icon = (d) => `<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${d}</svg>`;
+  const items = [
+    ['Pedidos em tempo real', 'Cada pedido confirmado aparece no quadro da cozinha com alarme sonoro. Um toque passa de “novo” para “em preparo”, “saiu” e “entregue”, e o cliente recebe aviso no WhatsApp a cada etapa.', icon('<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h10M7 13h6"/>')],
+    ['Cardápio com fotos', 'Itens, tamanhos, adicionais e fotos cadastrados no painel. Marcou “esgotado”, a IA para de oferecer na hora. Quando o cliente pede um item, a foto vai junto na conversa.', icon('<rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/>')],
+    ['Entende áudio', 'Cliente mandou áudio? A IA transcreve e anota o pedido do mesmo jeito. Sem pedir para “escrever de novo”.', icon('<rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/>')],
+    ['Chat para assumir quando quiser', 'Quando o cliente pede uma pessoa, você recebe um aviso e responde pelo painel, com o histórico e os dados do cliente ao lado. Quando termina, devolve para a IA.', icon('<path d="M4 5h16v11H9l-5 4z"/>')],
+    ['Entregadores', 'Cadastre quem entrega. Ao despachar, o entregador recebe endereço, telefone e pagamento no WhatsApp e confirma “peguei” e “entreguei” pelo celular. O cliente é avisado.', icon('<circle cx="7" cy="17" r="3"/><circle cx="17" cy="17" r="3"/><path d="M7 17h7l3-8h4M10 9h5l2 8"/>')],
+    ['Integra com o seu sistema', 'Pedidos enviados ao seu PDV ou ERP pelo padrão Open Delivery (Abrasel) ou por webhook. Sem digitar o pedido duas vezes.', icon('<path d="M9 7H6a3 3 0 0 0 0 6h3M15 7h3a3 3 0 0 1 0 6h-3M8 10h8"/>')],
+  ];
+  return `<section class="ci-painel" id="painel"><div class="container"><div class="ci-heading"><h2>Um painel para a cozinha<br><span>e para você.</span></h2><p>A conversa acontece no WhatsApp; a operação acontece no painel, no celular, no tablet ou no computador. Sem instalar nada.</p></div><ul class="ci-painel-grid">${items.map(([t, d, i]) => `<li><span class="ci-painel-icon">${i}</span><h3>${t}</h3><p>${d}</p></li>`).join('')}</ul><p class="ci-painel-note">E no fim do dia, o resumo chega no seu WhatsApp: pedidos, faturamento, mais vendidos e as perguntas que a IA não soube responder.</p></div></section>`;
+}
+
 function serve() {
   const kinds = [
     ['Lanchonetes', 'Lanches, porções e combos com observação por item.', 'cardapio-lanche-600.jpg', 'Ilustração de um hambúrguer com queijo, alface e tomate.'],
@@ -89,13 +102,13 @@ function setup() {
   const steps = [
     ['Você manda o cardápio', 'Foto, PDF, planilha ou print. A gente organiza itens, preços, tamanhos e observações.'],
     ['A IA aprende o seu jeito', 'Horário de funcionamento, área de entrega, formas de pagamento, tempo médio e as perguntas que mais chegam.'],
-    ['Liga no seu WhatsApp', 'O atendimento começa no número do restaurante. Ajustes de cardápio e preço são feitos por mensagem, com a gente.'],
+    ['Liga no seu WhatsApp', 'O atendimento começa no número do restaurante. Dali em diante, preço, item esgotado, horário e fotos você mesmo ajusta no painel, em um toque.'],
   ];
   return `<section class="ci-setup" id="implantacao"><div class="container ci-setup-grid"><div class="ci-heading"><h2>Três passos<br><span>e está atendendo.</span></h2><p>Sem instalar nada no balcão. Sem treinar equipe. Você continua recebendo os pedidos como hoje, só que anotados.</p>${cta('Quero começar')}</div><ol class="ci-setup-steps">${steps.map(([t, d], i) => `<li><span aria-hidden="true">${i + 1}</span><div><h3>${t}</h3><p>${d}</p></div></li>`).join('')}</ol></div></section>`;
 }
 
 function pricing() {
-  const included = ['Cardápio digital respondido no WhatsApp, 24 horas', 'Anotação do pedido com itens, observações e total', 'Confirmação de endereço, previsão e forma de pagamento', 'Horário de funcionamento, área de entrega e itens em falta', 'Passagem para atendimento humano quando o cliente pede', 'Resumo diário de pedidos e perguntas sem resposta', 'Alterações de cardápio e preço por mensagem'];
+  const included = ['Cardápio com fotos respondido no WhatsApp, 24 horas, em texto ou áudio', 'Anotação do pedido com itens, observações e total', 'Confirmação de endereço, previsão e forma de pagamento', 'Painel com pedidos em tempo real, alarme de pedido novo e comanda', 'Cadastro de cardápio, horários, bairros e entregadores pelo painel', 'Chat para assumir a conversa e aviso no seu WhatsApp quando o cliente pede uma pessoa', 'Resumo diário de pedidos e perguntas sem resposta', 'Integração com PDV por Open Delivery ou webhook'];
   return `<section class="ci-price" id="plano"><div class="container ci-price-grid"><div class="ci-price-card"><p class="ci-price-value"><span class="ci-currency">R$</span><span class="ci-amount">99</span><span class="ci-period">/mês</span></p><p class="ci-price-note">Plano único: um número de WhatsApp e um cardápio. Pagamento mensal.</p>${cta('Quero o Cardápio IA', 'ci-button-big')}<p class="ci-price-foot">O botão abre uma conversa no WhatsApp com a Otimizza Digital. A contratação é combinada por lá.</p></div><div class="ci-price-list"><h2>O que está incluído<br><span>nos R$ 99.</span></h2><ul>${included.map(item => `<li>${check}<span>${item}</span></li>`).join('')}</ul><p class="ci-price-obs">O pagamento do cliente continua acontecendo como hoje: Pix, cartão na entrega ou dinheiro. O Cardápio IA informa e confirma, não processa o pagamento.</p></div></div></section>`;
 }
 
@@ -103,8 +116,10 @@ function faq() {
   const items = [
     ['Funciona no número de WhatsApp que eu já uso?', 'Sim. O atendimento é ligado ao número do restaurante. Seus clientes continuam chamando no mesmo contato de sempre.'],
     ['E se o cliente quiser falar com uma pessoa?', 'A IA percebe quando o cliente pede uma pessoa, avisa você e deixa a conversa aberta para a equipe responder. Ninguém fica preso com o robô.'],
-    ['Como eu mudo um preço ou tiro um item do cardápio?', 'Por mensagem. Você avisa “acabou o açaí 500 ml” ou “X-Bacon agora é R$ 28” e o cardápio respondido é atualizado.'],
-    ['Preciso de computador ou de um sistema de pedidos?', 'Não. Os pedidos chegam anotados na própria conversa e no resumo do dia. Se você já usa um sistema de pedidos, conversamos sobre a integração.'],
+    ['Como eu mudo um preço ou tiro um item do cardápio?', 'No painel, pelo celular. Um toque em “esgotado” e a IA para de oferecer o item na hora; preço, foto, tamanhos e adicionais também são editados ali.'],
+    ['Preciso de computador ou de um sistema de pedidos?', 'Não. O painel abre no celular ou em um tablet na cozinha e mostra os pedidos em tempo real. Se você já usa um sistema de pedidos ou PDV, o Cardápio IA envia os pedidos para ele pelo padrão Open Delivery ou por webhook.'],
+    ['Meus clientes mandam muito áudio. Funciona?', 'Sim. A IA transcreve o áudio e anota o pedido como se fosse texto. Só pede para escrever se o áudio estiver inaudível.'],
+    ['Como fica a entrega?', 'Você cadastra seus entregadores no painel. Ao despachar o pedido, o entregador recebe endereço, telefone do cliente e forma de pagamento no WhatsApp, e confirma pelo celular quando pega e quando entrega. O cliente é avisado em cada etapa.'],
     ['A IA pode responder algo errado?', 'Ela responde a partir do cardápio e das regras que você informa. O que não sabe, encaminha para você em vez de inventar. O resumo diário lista essas perguntas para ajustarmos.'],
     ['Tem fidelidade ou taxa de instalação?', 'Essas condições são combinadas na conversa de contratação pelo WhatsApp. O valor do plano é R$ 99 por mês.'],
   ];
@@ -113,9 +128,10 @@ function faq() {
 
 export function cardapioPage() {
   const body = `
-<section class="ci-hero" id="inicio"><div class="container ci-hero-grid"><div class="ci-hero-copy"><h1>Seu WhatsApp<br>atende sozinho.<br><span>Até na hora do rush.</span></h1><p class="ci-lead">O Cardápio IA responde na hora, mostra o cardápio, anota o pedido e confirma endereço e pagamento. No número do seu restaurante, 24 horas por dia.</p><div class="ci-hero-offer"><p class="ci-hero-price"><strong>R$ 99</strong><span>por mês, plano único</span></p>${cta('Quero no meu restaurante', 'ci-button-big')}</div><a class="ci-text-link" href="#antes-depois">Ver o antes e depois ${arrow}</a></div><div class="ci-hero-visual"><figure class="ci-hero-scene"><img src="/assets/illustrations/cardapio-rush-1600.jpg" srcset="/assets/illustrations/cardapio-rush-900.jpg 900w, /assets/illustrations/cardapio-rush-1600.jpg 1600w" sizes="(max-width:960px) 100vw, 58vw" width="1600" height="1010" alt="Ilustração de uma lanchonete no horário de pico: chapeiro trabalhando, atendente entregando uma sacola, fila de clientes e mochila de entrega no balcão." fetchpriority="high" decoding="async"></figure>${chatDemo()}</div></div><div class="container ci-hero-chart">${hourChart()}</div></section>
+<section class="ci-hero" id="inicio"><div class="container ci-hero-grid"><div class="ci-hero-copy"><h1>Seu WhatsApp<br>atende sozinho.<br><span>Até na hora do rush.</span></h1><p class="ci-lead">O Cardápio IA responde na hora, mostra o cardápio com fotos, anota o pedido, confirma endereço e pagamento e manda tudo para o painel da cozinha. No número do seu restaurante, 24 horas por dia.</p><div class="ci-hero-offer"><p class="ci-hero-price"><strong>R$ 99</strong><span>por mês, plano único</span></p>${cta('Quero no meu restaurante', 'ci-button-big')}</div><a class="ci-text-link" href="#antes-depois">Ver o antes e depois ${arrow}</a></div><div class="ci-hero-visual"><figure class="ci-hero-scene"><img src="/assets/illustrations/cardapio-rush-1600.jpg" srcset="/assets/illustrations/cardapio-rush-900.jpg 900w, /assets/illustrations/cardapio-rush-1600.jpg 1600w" sizes="(max-width:960px) 100vw, 58vw" width="1600" height="1010" alt="Ilustração de uma lanchonete no horário de pico: chapeiro trabalhando, atendente entregando uma sacola, fila de clientes e mochila de entrega no balcão." fetchpriority="high" decoding="async"></figure>${chatDemo()}</div></div><div class="container ci-hero-chart">${hourChart()}</div></section>
 ${compare()}
 ${flow()}
+${painel()}
 ${serve()}
 ${setup()}
 ${pricing()}
@@ -125,7 +141,8 @@ ${faq()}
   const faqSchema = { '@type': 'FAQPage', mainEntity: [
     ['Funciona no número de WhatsApp que eu já uso?', 'Sim. O atendimento é ligado ao número do restaurante. Seus clientes continuam chamando no mesmo contato de sempre.'],
     ['E se o cliente quiser falar com uma pessoa?', 'A IA percebe quando o cliente pede uma pessoa, avisa você e deixa a conversa aberta para a equipe responder.'],
-    ['Como eu mudo um preço ou tiro um item do cardápio?', 'Por mensagem. Você avisa a alteração e o cardápio respondido é atualizado.'],
+    ['Como eu mudo um preço ou tiro um item do cardápio?', 'No painel, pelo celular: esgotado, preço, foto, tamanhos e adicionais são editados em um toque.'],
+    ['Meus clientes mandam muito áudio. Funciona?', 'Sim. A IA transcreve o áudio e anota o pedido como se fosse texto.'],
   ].map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) };
   const product = { '@type': 'Product', name: 'Cardápio IA', description: 'Cardápio e atendimento automático com inteligência artificial no WhatsApp para restaurantes, lanchonetes e similares.', brand: { '@type': 'Brand', name: 'Otimizza Digital' }, offers: { '@type': 'Offer', price: '99.00', priceCurrency: 'BRL', url: site.origin + '/', availability: 'https://schema.org/InStock', priceSpecification: { '@type': 'UnitPriceSpecification', price: '99.00', priceCurrency: 'BRL', billingIncrement: 1, unitCode: 'MON' } } };
   return layout({ path: '/', title: 'Cardápio IA: atendimento automático no WhatsApp para restaurantes', description: 'Cardápio com inteligência artificial no WhatsApp do seu restaurante ou lanchonete: responde, anota pedidos e confirma entrega 24h. Plano único de R$ 99/mês.', body, extra: [faqSchema, product] });

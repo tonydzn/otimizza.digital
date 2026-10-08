@@ -17,7 +17,7 @@ export const brand = `${mark}<span class="brand-name">otimizza<span>.digital</sp
 const whatsappGlyph = `<svg viewBox="0 0 32 32" aria-hidden="true" fill="currentColor"><path d="M16 2a14 14 0 0 0-12.1 21L2 30l7.2-1.9A14 14 0 1 0 16 2Zm0 25.4a11.3 11.3 0 0 1-5.8-1.6l-.4-.2-4.2 1.1 1.1-4.1-.3-.5A11.4 11.4 0 1 1 16 27.4Zm6.3-8.5c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a9.3 9.3 0 0 1-4.5-3.9c-.3-.5.3-.5.9-1.7.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.6-.5-.8-.5h-.6c-.2 0-.6.1-.8.4s-1.1 1.1-1.1 2.6 1.1 3 1.3 3.2 2.3 3.6 5.5 5c2 .8 2.8.9 3.8.7.6-.1 1.9-.8 2.2-1.5s.3-1.3.2-1.5-.2-.2-.5-.4Z"/></svg>`;
 
 function header() {
-  return `<a class="skip-link" href="#conteudo">Pular para o conteúdo</a><header class="site-header"><div class="container header-inner"><a class="brand" href="/" aria-label="Otimizza Digital — início">${brand}</a><nav class="site-nav" aria-label="Seções"><a href="#como-funciona">Como funciona</a><a href="#plano">Plano</a><a href="#duvidas">Dúvidas</a></nav><a class="header-cta" href="${escape(whatsappUrl())}" target="_blank" rel="noopener noreferrer">${whatsappGlyph}<span>Falar no WhatsApp</span></a></div></header>`;
+  return `<a class="skip-link" href="#conteudo">Pular para o conteúdo</a><header class="site-header"><div class="container header-inner"><a class="brand" href="/" aria-label="Otimizza Digital — início">${brand}</a><nav class="site-nav" aria-label="Seções"><a href="#como-funciona">Como funciona</a><a href="#painel">Painel</a><a href="#plano">Plano</a><a href="#duvidas">Dúvidas</a></nav><a class="header-cta" href="${escape(whatsappUrl())}" target="_blank" rel="noopener noreferrer">${whatsappGlyph}<span>Falar no WhatsApp</span></a></div></header>`;
 }
 
 function footer() {

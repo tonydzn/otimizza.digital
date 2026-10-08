@@ -206,3 +206,15 @@
 }
 @media(max-width:370px){.ci-hero h1{font-size:40px}.ci-amount{font-size:78px}.ci-sticky .ci-button span{display:none}.ci-sticky .ci-button{padding:0 14px}}
 @media(prefers-reduced-motion:reduce){.js [data-chat] .ci-msg[data-msg]{opacity:1;transform:none;transition:none}.ci-messages{scroll-behavior:auto}.ci-typing span{animation:none}.ci-panel.is-entering{animation:none}.ci-kinds li:hover img{transform:none}}
+
+/* painel (seção) */
+.ci-painel{padding:var(--section) 0}
+.ci-painel-grid{list-style:none;margin:44px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2vw,28px)}
+.ci-painel-grid li{border:1px solid var(--line);border-radius:6px;padding:22px 22px 24px;background:rgba(255,255,255,.03)}
+.ci-painel-icon{display:inline-flex;width:44px;height:44px;border-radius:50%;align-items:center;justify-content:center;color:var(--green-text);background:rgba(31,184,90,.12);margin-bottom:14px}
+.ci-painel-icon svg{width:24px;height:24px}
+.ci-painel-grid h3{font:500 26px/1.1 var(--display);margin:0 0 8px}
+.ci-painel-grid p{margin:0;font-size:15px;line-height:1.6;color:var(--muted)}
+.ci-painel-note{margin:28px 0 0;font-size:16px;line-height:1.6;color:var(--muted);max-width:62ch}
+@media(max-width:960px){.ci-painel-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.ci-painel-grid{grid-template-columns:1fr;gap:12px}.ci-painel-grid h3{font-size:23px}}
