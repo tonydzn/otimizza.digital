@@ -7,8 +7,8 @@ export const site = {
   owner: 'Tony Ananias',
   ownerSite: 'https://tonyananias.com.br',
   email: 'tony.ananias@gmail.com',
-  whatsapp: '5518981034411',
-  whatsappDisplay: '(18) 98103-4411',
+  whatsapp: '5518981868701',
+  whatsappDisplay: '(18) 98186-8701',
   whatsappText: 'Olá! Quero o Cardápio IA no meu restaurante. Pode me explicar como funciona?',
   city: 'Presidente Prudente, SP',
 };

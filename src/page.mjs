@@ -136,7 +136,7 @@ ${serve()}
 ${setup()}
 ${pricing()}
 ${faq()}
-<section class="ci-final"><div class="container"><h2>A próxima noite de rush<br><span>pode ser mais tranquila.</span></h2><p>Chama no WhatsApp, conta como é o seu atendimento hoje e a gente te mostra como o Cardápio IA ficaria no seu restaurante.</p>${cta('Falar com a gente no WhatsApp', 'ci-button-big')}<p class="ci-final-note">Otimizza Digital · Presidente Prudente e região · (18) 98103-4411</p></div></section>
+<section class="ci-final"><div class="container"><h2>A próxima noite de rush<br><span>pode ser mais tranquila.</span></h2><p>Chama no WhatsApp, conta como é o seu atendimento hoje e a gente te mostra como o Cardápio IA ficaria no seu restaurante.</p>${cta('Falar com a gente no WhatsApp', 'ci-button-big')}<p class="ci-final-note">Otimizza Digital · Presidente Prudente e região · (18) 98186-8701</p></div></section>
 <div class="ci-sticky" aria-hidden="true"><span><strong>R$ 99</strong>/mês</span>${cta('Quero no meu restaurante')}</div>`;
   const faqSchema = { '@type': 'FAQPage', mainEntity: [
     ['Funciona no número de WhatsApp que eu já uso?', 'Sim. O atendimento é ligado ao número do restaurante. Seus clientes continuam chamando no mesmo contato de sempre.'],
