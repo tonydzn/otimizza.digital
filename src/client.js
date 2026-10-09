@@ -9,7 +9,7 @@
     if (!link) return;
     try {
       window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({ event: 'whatsapp_click', content_name: 'Cardápio IA', link_text: (link.textContent || '').trim().slice(0, 80), page_path: location.pathname }); if (window.fbq) { try { window.fbq('track', 'Contact', { content_name: 'Cardápio IA' }); } catch (e) {} }
+      window.dataLayer.push({ event: 'whatsapp_click', content_name: 'Cardápio IA', link_text: (link.textContent || '').trim().slice(0, 80), page_path: location.pathname });
     } catch { /* rastreamento nunca quebra a página */ }
   }, { capture: true });
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -77,7 +77,6 @@
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push(['consent', 'update', { analytics_storage: ok ? 'granted' : 'denied', ad_storage: ok ? 'granted' : 'denied', ad_user_data: ok ? 'granted' : 'denied', ad_personalization: ok ? 'granted' : 'denied' }]);
     window.dataLayer.push({ event: ok ? 'consent_granted' : 'consent_denied' });
-    if (window.fbq) { try { window.fbq('consent', ok ? 'grant' : 'revoke'); } catch (e) {} }
   };
   var mostrar = function () { aviso.hidden = false; };
   if (!ler()) mostrar();
