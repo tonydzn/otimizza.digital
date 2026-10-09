@@ -7,7 +7,7 @@ test('O build gera a página do Cardápio IA com preço, WhatsApp e sem referên
   const pages = await build();
   const html = pages.get('/');
   assert.ok(html.includes('ci-hero'));
-  assert.ok(html.includes('R$ 99'));
+  assert.ok(html.includes('R$ 149'));
   assert.ok(html.includes('https://wa.me/5518981868701?text='));
   assert.ok(!html.includes('TA Consulting | '));
   assert.ok(html.includes('"@type":"Product"'));

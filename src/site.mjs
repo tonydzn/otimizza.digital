@@ -14,6 +14,6 @@ export const site = {
   cityName: 'Presidente Prudente',
   region: 'SP',
   country: 'BR',
-  updated: '2026-10-08',
+  updated: '2026-10-09',
   sameAs: [],   // perfis sociais (Instagram, LinkedIn): preencher quando existirem
 };
