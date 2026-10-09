@@ -9,7 +9,7 @@
     if (!link) return;
     try {
       window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({ event: 'whatsapp_click', content_name: 'Cardápio IA', link_text: (link.textContent || '').trim().slice(0, 80), page_path: location.pathname });
+      window.dataLayer.push({ event: 'whatsapp_click', content_name: 'Cardápio IA', link_text: (link.textContent || '').trim().slice(0, 80), page_path: location.pathname }); if (window.fbq) { try { window.fbq('track', 'Contact', { content_name: 'Cardápio IA' }); } catch (e) {} }
     } catch { /* rastreamento nunca quebra a página */ }
   }, { capture: true });
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
