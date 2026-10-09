@@ -67,3 +67,20 @@
     select('sem');
   }
 })();
+
+// Aviso de cookies: a escolha fica no navegador; "aceito" libera Google (Consent Mode) e Meta Pixel.
+(function () {
+  var aviso = document.getElementById('aviso-cookies'); if (!aviso) return;
+  var ler = function () { try { return localStorage.getItem('consentimento'); } catch (e) { return null; } };
+  var aplicar = function (v) {
+    var ok = v === 'aceito';
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push(['consent', 'update', { analytics_storage: ok ? 'granted' : 'denied', ad_storage: ok ? 'granted' : 'denied', ad_user_data: ok ? 'granted' : 'denied', ad_personalization: ok ? 'granted' : 'denied' }]);
+    window.dataLayer.push({ event: ok ? 'consent_granted' : 'consent_denied' });
+    if (window.fbq) { try { window.fbq('consent', ok ? 'grant' : 'revoke'); } catch (e) {} }
+  };
+  var mostrar = function () { aviso.hidden = false; };
+  if (!ler()) mostrar();
+  aviso.querySelectorAll('[data-consent]').forEach(function (b) { b.addEventListener('click', function () { var v = b.getAttribute('data-consent'); try { localStorage.setItem('consentimento', v); } catch (e) {} aplicar(v); aviso.hidden = true; }); });
+  document.querySelectorAll('[data-cookie-prefs]').forEach(function (a) { a.addEventListener('click', function (e) { e.preventDefault(); try { localStorage.removeItem('consentimento'); } catch (err) {} mostrar(); aviso.scrollIntoView({ block: 'end' }); }); });
+})();
