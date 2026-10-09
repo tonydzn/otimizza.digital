@@ -94,3 +94,12 @@ html{scroll-padding-top:72px}
 .footer-social a{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:inherit}
 .footer-social svg{width:20px;height:20px}
 .footer-social a:hover{color:var(--green-text)}
+
+.pp-eyebrow{margin:0 0 10px;font:600 12px/1 Manrope,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--green-text)}
+.pp-lead{font-size:17px;line-height:1.6;color:var(--muted);max-width:66ch}
+.pp-nav{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 10px}
+.pp-nav a{display:inline-block;padding:6px 11px;border:1px solid var(--line);border-radius:999px;font-size:13px;color:var(--muted);text-decoration:none}
+.pp-nav a:hover{color:var(--ink);border-color:var(--green-text)}
+.pp h2{scroll-margin-top:90px}
+.pp ul{padding-left:20px;display:flex;flex-direction:column;gap:8px}
+.pp li{line-height:1.6}
