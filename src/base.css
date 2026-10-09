@@ -28,6 +28,9 @@ main{overflow:clip}
 .header-inner{display:flex;align-items:center;gap:28px;height:76px}
 .site-nav{display:flex;gap:26px;margin-left:auto;font-size:14px;font-weight:600}
 .site-nav a:hover{color:var(--green-text)}
+.header-login{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 14px;border:1px solid var(--line);border-radius:4px;font-size:14px;font-weight:600;color:var(--ink);transition:border-color .2s,color .2s}
+.header-login:hover{border-color:var(--green-text);color:var(--green-text)}
+.header-login svg{width:18px;height:18px}
 .header-cta{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 18px;border-radius:4px;background:var(--green);color:var(--green-ink);font-size:14px;font-weight:700;transition:background .2s}
 .header-cta:hover{background:#1aa550}
 .header-cta svg{width:20px;height:20px}
@@ -65,7 +68,9 @@ main{overflow:clip}
 html{scroll-padding-top:72px}
 .header-inner{height:64px;gap:14px}
 .site-nav{display:none}
-.header-cta{margin-left:auto;padding:0 14px}
+.header-login{margin-left:auto;padding:0 12px}
+.header-login span{font-size:13px}
+.header-cta{padding:0 14px}
 .header-cta span{display:none}
 .brand-mark{width:30px;height:30px}.brand-name{font-size:22px}
 .footer-grid{grid-template-columns:1fr;gap:28px}
