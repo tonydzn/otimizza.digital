@@ -4,12 +4,14 @@
   page.classList.add('js');
 
   // Cliques no WhatsApp vão para o dataLayer (GTM) como conversão de contato.
+  // Exceção: links com data-track="teste" (número de teste da IA) mandam bot_teste_click, que NÃO deve virar conversão no Meta.
   document.addEventListener('click', event => {
     const link = event.target.closest?.('a[href*="wa.me/"], a[href*="api.whatsapp.com"]');
     if (!link) return;
     try {
       window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({ event: 'whatsapp_click', content_name: 'Cardápio IA', link_text: (link.textContent || '').trim().slice(0, 80), page_path: location.pathname });
+      const teste = link.dataset.track === 'teste';
+      window.dataLayer.push({ event: teste ? 'bot_teste_click' : 'whatsapp_click', content_name: teste ? 'Teste da IA' : 'Cardápio IA', link_text: (link.textContent || '').trim().slice(0, 80), page_path: location.pathname });
     } catch { /* rastreamento nunca quebra a página */ }
   }, { capture: true });
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

@@ -9,12 +9,15 @@ test('O build gera a página do Cardápio IA com preço, WhatsApp e sem referên
   assert.ok(html.includes('ci-hero'));
   assert.ok(html.includes('R$ 149'));
   assert.ok(html.includes('https://wa.me/5518981868701?text='));
+  // link de teste da IA: número do bot, marcado para não contar como conversão
+  assert.ok(html.includes('https://wa.me/5518981034411?text=') && html.includes('data-track="teste"'));
   assert.ok(!html.includes('TA Consulting | '));
   assert.ok(html.includes('"@type":"Product"'));
   const css = await readFile(new URL('../dist/assets/site.css', import.meta.url), 'utf8');
   assert.ok(css.includes('.ci-hero') && css.includes('.site-header'));
   const js = await readFile(new URL('../dist/assets/site.js', import.meta.url), 'utf8');
   assert.ok(js.includes('data-chat'));
+  assert.ok(js.includes('bot_teste_click'));
 });
 
 test('Google Tag Manager está no head e no body de todas as páginas', async () => {

@@ -10,6 +10,12 @@
 .ci-button .ci-wa{width:22px;height:22px;flex:none}
 .ci-button-big{min-height:64px;padding:14px 32px 14px 24px;font-size:17px}
 .ci-button-big .ci-wa{width:26px;height:26px}
+.ci-button-ghost{background:transparent;color:var(--ink);border:2px solid var(--ink);min-height:52px}
+.ci-button-ghost:hover{background:var(--ink);color:#fff}
+.ci-hero-teste{display:grid;gap:12px;margin:0 0 22px;padding:16px 18px;border:1px dashed rgba(0,0,0,.25);border-radius:8px;max-width:560px}
+.ci-hero-teste-copy{margin:0;font-size:15px;line-height:1.5;color:var(--muted)}
+.ci-hero-teste-copy strong{color:var(--ink)}
+.ci-demo-obs{grid-column:1/-1;margin:0;font-size:13px;line-height:1.5;color:var(--muted)}
 .ci-text-link{display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:600;color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:3px}
 .ci-text-link:hover{color:var(--green-text);border-color:var(--green-text)}
 .ci-text-link .icon,.ci-replay .icon,.ci-faq summary .icon{width:16px;height:16px}
@@ -198,6 +204,7 @@
 .ci-chart figcaption strong{font-size:19px}
 .ci-chart-hours svg{font-size:22px}.ci-chart-hours .odd text{display:none}.ci-chart-hours .rush-label{font-size:24px}
 .ci-button-big{width:100%;justify-content:center}
+.ci-hero-teste .ci-button,.ci-demo-actions .ci-button-ghost{width:100%;justify-content:center}
 .ci-final .ci-button{width:100%;justify-content:center}
 .ci-sticky{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:10px 16px max(10px,env(safe-area-inset-bottom));background:#fff;border-top:1px solid var(--line)}
 .ci-sticky span{font-size:13px;color:var(--muted);white-space:nowrap}

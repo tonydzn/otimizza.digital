@@ -10,6 +10,11 @@ export const site = {
   whatsapp: '5518981868701',
   whatsappDisplay: '(18) 98186-8701',
   whatsappText: 'Olá! Quero o Cardápio IA no meu restaurante. Pode me explicar como funciona?',
+  // Número de TESTE da IA (loja "Otimizza Digital" no painel): o visitante conversa com o bot e faz um pedido fictício.
+  // Clique nesse link NÃO é conversão (Meta/GTM recebe o evento bot_teste_click, não whatsapp_click).
+  botWhatsapp: '5518981034411',
+  botWhatsappDisplay: '(18) 98103-4411',
+  botWhatsappText: 'Oi! Quero ver o cardápio',
   city: 'Presidente Prudente, SP',
   cityName: 'Presidente Prudente',
   region: 'SP',
