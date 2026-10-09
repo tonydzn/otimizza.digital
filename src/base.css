@@ -89,3 +89,8 @@ html{scroll-padding-top:72px}
 .cookie-actions .cookie-aceitar{background:#1fb85a;border-color:#1fb85a;color:#06301a}
 .simple-updated{color:#5b626a;font-size:14px;margin-top:28px}
 @media(max-width:700px){.cookie-notice{bottom:84px;padding:14px}.cookie-actions{width:100%;margin-left:0}.cookie-actions button{flex:1}}
+
+.footer-social{display:flex;flex-wrap:wrap;gap:14px;margin-top:12px}
+.footer-social a{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:inherit}
+.footer-social svg{width:20px;height:20px}
+.footer-social a:hover{color:var(--green-text)}

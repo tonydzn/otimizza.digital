@@ -15,5 +15,7 @@ export const site = {
   region: 'SP',
   country: 'BR',
   updated: '2026-10-09',
-  sameAs: [],   // perfis sociais (Instagram, LinkedIn): preencher quando existirem
+  instagram: 'https://www.instagram.com/otimizza_digital/',
+  facebook: '',   // URL da página do Facebook: preencher quando tiver
+  get sameAs() { return [this.instagram, this.facebook].filter(Boolean); },
 };
