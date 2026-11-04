@@ -1,4 +1,4 @@
-import { ArrowUp, MapPin, Phone } from "lucide-react";
+import { ArrowUp, Mail, MapPin, Phone } from "lucide-react";
 import { Container } from "@/components/ui/Section";
 import { Logo, WhatsAppIcon } from "@/components/ui/Icons";
 import { BRAND, LINKS, NAV_ITEMS } from "@/lib/content";
@@ -39,7 +39,7 @@ export function Footer() {
               {NAV_ITEMS.map((i) => (
                 <li key={i.id}>
                   <a
-                    href={`#${i.id}`}
+                    href={`/#${i.id}`}
                     className="text-muted underline-offset-4 transition-colors hover:text-brand-700 hover:underline"
                   >
                     {i.label}
@@ -48,10 +48,28 @@ export function Footer() {
               ))}
               <li>
                 <a
-                  href="#contato"
+                  href="/#contato"
                   className="text-muted underline-offset-4 transition-colors hover:text-brand-700 hover:underline"
                 >
                   Fale com a gente
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/ajuda/"
+                  className="text-muted underline-offset-4 transition-colors hover:text-brand-700 hover:underline"
+                >
+                  Guia de implantação
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://app.otimizza.digital/login"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted underline-offset-4 transition-colors hover:text-brand-700 hover:underline"
+                >
+                  Entrar no painel
                 </a>
               </li>
             </ul>
@@ -72,6 +90,15 @@ export function Footer() {
                 >
                   {BRAND.phoneLabel}
                   <span className="sr-only"> (WhatsApp, abre em nova aba)</span>
+                </a>
+              </li>
+              <li className="flex items-start gap-3">
+                <Mail className="mt-0.5 size-4 shrink-0 text-brand-600" aria-hidden="true" />
+                <a
+                  href="mailto:tony.ananias@gmail.com"
+                  className="underline-offset-4 transition-colors hover:text-brand-700 hover:underline"
+                >
+                  tony.ananias@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-3">
@@ -102,8 +129,6 @@ export function Footer() {
             © {year} {BRAND.name} · {BRAND.city} ·{" "}
             <a
               href={PRIVACY_URL}
-              target="_blank"
-              rel="noopener noreferrer"
               className="underline-offset-4 hover:text-brand-700 hover:underline"
             >
               Privacidade
@@ -118,7 +143,7 @@ export function Footer() {
             </button>
           </p>
           <a
-            href="#topo"
+            href="#"
             className="group inline-flex items-center gap-2 rounded-full border border-line bg-white px-4 py-2 font-medium text-ink transition-all hover:-translate-y-0.5 hover:border-brand-300"
           >
             Voltar ao topo

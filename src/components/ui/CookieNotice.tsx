@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { CONSENT_RESET_EVENT, initClickTracking, readConsent, setConsent } from "@/lib/tracking";
 
-export const PRIVACY_URL = "https://otimizza.digital/privacidade/";
+export const PRIVACY_URL = "/privacidade/";
 
 /** Aviso de cookies (LGPD). Até a escolha, o Consent Mode mantém GA4 e Meta Pixel sem cookies. */
 export function CookieNotice() {
@@ -36,8 +36,6 @@ export function CookieNotice() {
         do site e divulgar o Cardápio IA. Você escolhe.{" "}
         <a
           href={PRIVACY_URL}
-          target="_blank"
-          rel="noopener noreferrer"
           className="text-brand-300 underline underline-offset-2"
         >
           Saiba mais

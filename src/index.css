@@ -463,3 +463,161 @@
     overflow: clip;
   }
 }
+
+/* ------------------------------------------------------------------ */
+/* Páginas internas (privacidade, guia, 404): conteúdo estático no HTML */
+/* ------------------------------------------------------------------ */
+@layer components {
+  .doc-page .simple-page {
+    max-width: 52rem;
+    margin: 0 auto;
+    padding: 3.5rem 1.25rem 5rem;
+    color: var(--color-muted);
+    font-size: 1.02rem;
+    line-height: 1.75;
+  }
+  @media (min-width: 640px) {
+    .doc-page .simple-page { padding: 4.5rem 2rem 6rem; }
+  }
+  .doc-page h1 {
+    color: var(--color-ink);
+    font-size: clamp(2rem, 5vw, 3.1rem);
+    font-weight: 800;
+    line-height: 1.08;
+    margin: 0.4rem 0 1.25rem;
+  }
+  .doc-page h1 span { color: var(--color-brand-600); }
+  .doc-page h2 {
+    color: var(--color-ink);
+    font-size: clamp(1.25rem, 2.6vw, 1.55rem);
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 2.75rem 0 0.9rem;
+    scroll-margin-top: 96px;
+  }
+  .doc-page h2 span, .doc-page [id] { scroll-margin-top: 96px; }
+  .doc-page p { margin: 0 0 1rem; }
+  .doc-page ul { list-style: disc; padding-left: 1.3rem; margin: 0 0 1rem; }
+  .doc-page ul li { margin: 0.45rem 0; padding-left: 0.2rem; }
+  .doc-page ul li::marker { color: var(--color-brand-500); }
+  .doc-page strong { color: var(--color-ink); font-weight: 600; }
+  .doc-page a:not(.ci-button) {
+    color: var(--color-brand-700);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .doc-page a:not(.ci-button):hover { color: var(--color-brand-800); }
+  .doc-page code {
+    background: var(--color-paper-2);
+    border: 1px solid var(--color-line);
+    border-radius: 6px;
+    padding: 0.1rem 0.4rem;
+    font-size: 0.92em;
+    color: var(--color-ink);
+  }
+
+  /* Eyebrow + lead */
+  .doc-page .pp-eyebrow,
+  .doc-page .ci-ajuda-eyebrow {
+    display: inline-flex;
+    border: 1px solid color-mix(in oklab, var(--color-brand-200) 70%, transparent);
+    background: var(--color-brand-50);
+    color: var(--color-brand-700);
+    border-radius: 999px;
+    padding: 0.35rem 0.9rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  .doc-page .pp-lead,
+  .doc-page .ci-lead { font-size: 1.15rem; color: var(--color-muted); max-width: 44rem; }
+
+  /* Índices */
+  .doc-page .pp-nav,
+  .doc-page .ci-ajuda-nav {
+    margin: 2rem 0 0.5rem;
+    padding: 1.1rem 1.25rem;
+    background: #fff;
+    border: 1px solid var(--color-line);
+    border-radius: 1.25rem;
+    font-size: 0.95rem;
+  }
+  .doc-page .pp-nav { display: flex; flex-wrap: wrap; gap: 0.4rem 1.1rem; }
+  .doc-page .pp-nav a, .doc-page .ci-ajuda-nav a { text-decoration: none; }
+  .doc-page .pp-nav a:hover, .doc-page .ci-ajuda-nav a:hover { text-decoration: underline; }
+  .doc-page .ci-ajuda-nav ol { list-style: decimal; padding-left: 1.4rem; margin: 0; columns: 2 16rem; column-gap: 2rem; }
+  .doc-page .ci-ajuda-nav li { margin: 0.3rem 0; break-inside: avoid; }
+  .doc-page .ci-ajuda-nav li::marker { color: var(--color-brand-600); font-weight: 600; }
+
+  /* Passos do guia */
+  .doc-page .ci-ajuda-steps { list-style: none; padding: 0; margin: 2.5rem 0 0; }
+  .doc-page .ci-ajuda-steps > li {
+    position: relative;
+    padding: 1.5rem 1.4rem 1.1rem 4.6rem;
+    margin-bottom: 1rem;
+    background: #fff;
+    border: 1px solid var(--color-line);
+    border-radius: 1.25rem;
+  }
+  .doc-page .ci-ajuda-steps h2 { margin: 0 0 0.6rem; font-size: 1.2rem; }
+  .doc-page .ci-ajuda-num {
+    position: absolute;
+    left: 1.25rem;
+    top: 1.35rem;
+    display: grid;
+    place-items: center;
+    width: 2.3rem;
+    height: 2.3rem;
+    border-radius: 999px;
+    background: var(--color-brand-500);
+    color: var(--color-ink);
+    font-family: var(--font-display);
+    font-weight: 800;
+  }
+  @media (max-width: 560px) {
+    .doc-page .ci-ajuda-steps > li { padding: 4rem 1.1rem 1rem; }
+    .doc-page .ci-ajuda-num { top: 1.1rem; left: 1.1rem; }
+  }
+
+  /* Dicas */
+  .doc-page .ci-ajuda-dicas { display: grid; gap: 0.9rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); margin: 0; }
+  .doc-page .ci-ajuda-dicas > div { background: var(--color-paper-2); border-radius: 1rem; padding: 1.1rem 1.2rem; }
+  .doc-page .ci-ajuda-dicas dt { color: var(--color-ink); font-weight: 700; font-family: var(--font-display); margin-bottom: 0.3rem; }
+  .doc-page .ci-ajuda-dicas dd { margin: 0; font-size: 0.95rem; line-height: 1.6; }
+
+  /* Bloco de demonstração */
+  .doc-page .ci-ajuda-demo {
+    margin-top: 3rem;
+    padding: 1.6rem 1.5rem 1.2rem;
+    background: var(--color-ink);
+    color: #d5ddd8;
+    border-radius: 1.5rem;
+  }
+  .doc-page .ci-ajuda-demo h2 { color: #fff; margin-top: 0; }
+  .doc-page .ci-ajuda-demo strong { color: #fff; }
+  .doc-page .ci-ajuda-demo a:not(.ci-button) { color: var(--color-brand-300); }
+  .doc-page .ci-ajuda-demo code { background: rgb(255 255 255 / 0.08); border-color: rgb(255 255 255 / 0.15); color: #fff; }
+  .doc-page .ci-ajuda-cred { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; }
+  .doc-page .ci-ajuda-obs { font-size: 0.93rem; color: #aab6af; }
+
+  /* Botão de WhatsApp */
+  .doc-page .ci-ajuda-cta { margin-top: 2.5rem; text-align: center; }
+  .doc-page .ci-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    border-radius: 999px;
+    background: var(--color-brand-500);
+    color: var(--color-ink);
+    font-weight: 600;
+    padding: 0.95rem 1.6rem;
+    text-decoration: none;
+    transition: background-color 0.2s;
+  }
+  .doc-page .ci-button:hover { background: var(--color-brand-400); }
+  .doc-page .ci-button .icon { width: 1.15rem; height: 1.15rem; }
+
+  .doc-page .simple-updated { margin-top: 2.5rem; font-size: 0.9rem; color: var(--color-subtle); }
+}
