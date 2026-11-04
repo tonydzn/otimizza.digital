@@ -1,12 +1,12 @@
 # Cardápio IA (Otimizza Digital)
 
-> Atendente de WhatsApp com inteligência artificial para restaurantes, lanchonetes, pizzarias, marmitarias e açaiterias no Brasil. Responde na hora, mostra o cardápio com fotos, anota pedidos com total, confirma endereço e pagamento, entende áudio e passa para uma pessoa quando o cliente pede. Inclui painel web com pedidos em tempo real, modo cozinha, cardápio online por link, entregadores, resumo diário e integração com PDV (Open Delivery / webhook). Preço: R$ 149 por mês por número de WhatsApp. Empresa: Otimizza Digital, Presidente Prudente, SP, Brasil. Contato: WhatsApp +5518981868701, tony.ananias@gmail.com.
+> Atendente de WhatsApp com inteligência artificial para restaurantes, lanchonetes, pizzarias, marmitarias e açaiterias no Brasil. Responde na hora, mostra o cardápio com fotos, anota pedidos com total, confirma endereço e pagamento, entende áudio e passa para uma pessoa quando o cliente pede. Inclui painel web com pedidos em tempo real, modo cozinha, cardápio online por link, entregadores, resumo diário e integração com PDV (Open Delivery / webhook). Preço: R$ 49,90 por mês por número de WhatsApp. Empresa: Otimizza Digital, Presidente Prudente, SP, Brasil. Contato: WhatsApp +5518981868701, tony.ananias@gmail.com.
 
 ## Fatos rápidos
 
 - Produto: Cardápio IA. Categoria: atendimento automático e pedidos pelo WhatsApp para restaurantes.
 - Funciona no número de WhatsApp que o restaurante já usa; o cliente não instala nada.
-- Preço: R$ 149/mês, plano único, um número e um cardápio. Sem instalação no balcão.
+- Preço: R$ 49,90/mês, plano único, um número e um cardápio. Sem instalação no balcão.
 - O pagamento do cliente final continua como hoje (Pix, cartão na entrega, dinheiro); o Cardápio IA informa e confirma, não processa pagamento.
 - Atende Presidente Prudente (SP), região e todo o Brasil, com implantação à distância.
 - Painel de demonstração público: https://app.otimizza.digital (e-mail demo@otimizza.digital, senha demo). Exemplo de cardápio online: https://app.otimizza.digital/m/demo
@@ -31,7 +31,7 @@
 - **Meus clientes mandam muito áudio. Funciona?** Sim. A IA transcreve o áudio e anota o pedido como se fosse texto. Só pede para escrever se o áudio estiver inaudível.
 - **Como fica a entrega?** Você cadastra seus entregadores no painel. Ao despachar o pedido, o entregador recebe endereço, telefone do cliente e forma de pagamento no WhatsApp, e confirma pelo celular quando pega e quando entrega. O cliente é avisado em cada etapa.
 - **A IA pode responder algo errado?** Ela responde a partir do cardápio e das regras que você informa. O que não sabe, encaminha para você em vez de inventar. O resumo diário lista essas perguntas para ajustarmos.
-- **Tem fidelidade ou taxa de instalação?** Essas condições são combinadas na conversa de contratação pelo WhatsApp. O valor do plano é R$ 149 por mês.
+- **Tem fidelidade ou taxa de instalação?** Essas condições são combinadas na conversa de contratação pelo WhatsApp. O valor do plano é R$ 49,90 por mês.
 - **Atende fora de Presidente Prudente?** Sim. O Cardápio IA funciona em qualquer cidade do Brasil, porque tudo acontece no WhatsApp e no painel online. A implantação é feita à distância.
 - **Funciona com iFood ou outros aplicativos de entrega?** O Cardápio IA cuida dos pedidos que chegam pelo WhatsApp do restaurante. Pedidos de iFood e similares continuam no sistema deles; se o restaurante usa um PDV que recebe tudo, o Cardápio IA pode enviar os pedidos para esse PDV pelo padrão Open Delivery ou por webhook.
 

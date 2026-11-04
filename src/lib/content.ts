@@ -5,7 +5,7 @@ export const BRAND = {
   product: "Cardápio IA",
   city: "Presidente Prudente, SP",
   phoneLabel: "(18) 98186-8701",
-  price: 149,
+  price: 49.9,
 } as const;
 
 const WA_MAIN = "5518981868701";
@@ -76,7 +76,7 @@ export const FAQ_ITEMS = [
   },
   {
     q: "Tem fidelidade ou taxa de instalação?",
-    a: "Essas condições são combinadas na conversa de contratação pelo WhatsApp. O valor do plano é R$ 149 por mês.",
+    a: "Essas condições são combinadas na conversa de contratação pelo WhatsApp. O valor do plano é R$ 49,90 por mês.",
   },
   {
     q: "Atende fora de Presidente Prudente?",
@@ -87,3 +87,6 @@ export const FAQ_ITEMS = [
     a: "É um atendente com inteligência artificial, mas não é aquele robô de menu com “digite 1”. O cliente escreve ou manda áudio do jeito dele e a IA entende, mostra o cardápio digital com fotos e anota o pedido. Quando precisa, passa a conversa para uma pessoa da equipe.",
   },
 ] as const;
+
+/** Preço formatado com centavos, ex.: "R$ 49,90". */
+export const PRICE_LABEL = brl(BRAND.price, 2);

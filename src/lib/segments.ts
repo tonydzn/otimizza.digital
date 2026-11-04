@@ -46,7 +46,7 @@ export const SEGMENTS: Segment[] = [
     label: "Pizzaria",
     metaTitle: "Atendimento automático no WhatsApp para pizzaria | Cardápio IA",
     metaDescription:
-      "Robô de WhatsApp com IA para pizzaria: anota sabores, meio a meio, tamanho e borda, confirma endereço e pagamento e manda o pedido para a cozinha. R$ 149/mês.",
+      "Robô de WhatsApp com IA para pizzaria: anota sabores, meio a meio, tamanho e borda, confirma endereço e pagamento e manda o pedido para a cozinha. R$ 49,90/mês.",
     ogTitle: "Sua pizzaria atendendo todo mundo no WhatsApp, até na sexta à noite.",
     eyebrow: "Cardápio IA para pizzarias",
     h1: "Atendimento automático no WhatsApp para",
@@ -94,7 +94,7 @@ export const SEGMENTS: Segment[] = [
     label: "Hamburgueria",
     metaTitle: "Atendimento automático no WhatsApp para hamburgueria e lanchonete | Cardápio IA",
     metaDescription:
-      "Robô de WhatsApp com IA para hamburgueria e lanchonete: entende “xbacon”, anota adicionais e observações como “sem cebola” e manda o pedido para a chapa. R$ 149/mês.",
+      "Robô de WhatsApp com IA para hamburgueria e lanchonete: entende “xbacon”, anota adicionais e observações como “sem cebola” e manda o pedido para a chapa. R$ 49,90/mês.",
     ogTitle: "Sua hamburgueria atendendo no WhatsApp enquanto a chapa trabalha.",
     eyebrow: "Cardápio IA para hamburguerias e lanchonetes",
     h1: "Atendimento automático no WhatsApp para",
@@ -142,7 +142,7 @@ export const SEGMENTS: Segment[] = [
     label: "Marmitaria",
     metaTitle: "Atendimento automático no WhatsApp para marmitaria | Cardápio IA",
     metaDescription:
-      "Robô de WhatsApp com IA para marmitaria: informa o cardápio do dia, anota tamanho e prato, respeita o horário de corte e organiza as entregas do almoço. R$ 149/mês.",
+      "Robô de WhatsApp com IA para marmitaria: informa o cardápio do dia, anota tamanho e prato, respeita o horário de corte e organiza as entregas do almoço. R$ 49,90/mês.",
     ogTitle: "Sua marmitaria fechando os pedidos do almoço sem ficar presa no celular.",
     eyebrow: "Cardápio IA para marmitarias",
     h1: "Atendimento automático no WhatsApp para",
@@ -190,7 +190,7 @@ export const SEGMENTS: Segment[] = [
     label: "Açaiteria",
     metaTitle: "Atendimento automático no WhatsApp para açaiteria | Cardápio IA",
     metaDescription:
-      "Robô de WhatsApp com IA para açaiteria: anota tamanho, acompanhamentos e adicionais, avisa quando um item acabou e manda o pedido para o balcão. R$ 149/mês.",
+      "Robô de WhatsApp com IA para açaiteria: anota tamanho, acompanhamentos e adicionais, avisa quando um item acabou e manda o pedido para o balcão. R$ 49,90/mês.",
     ogTitle: "Sua açaiteria montando cada copo certo, direto do WhatsApp.",
     eyebrow: "Cardápio IA para açaiterias",
     h1: "Atendimento automático no WhatsApp para",

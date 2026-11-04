@@ -42,7 +42,7 @@ export function MobileCTA() {
           <div className="glass flex items-center justify-between gap-3 rounded-full py-2 pl-5 pr-2 shadow-[0_20px_50px_-12px_rgb(10_21_17/0.45)]">
             <p className="leading-tight">
               <span className="block font-display text-sm font-extrabold text-ink">Cardápio IA</span>
-              <span className="text-xs text-muted">{brl(BRAND.price)}/mês · plano único</span>
+              <span className="text-xs text-muted">{brl(BRAND.price, 2)}/mês · plano único</span>
             </p>
             <Button href={LINKS.start} icon={<WhatsAppIcon className="size-[18px]" />} className="h-11">
               Falar agora

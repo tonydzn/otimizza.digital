@@ -37,7 +37,7 @@ const STATS = [
   { node: <Counter to={24} suffix="h" />, label: "de atendimento no seu WhatsApp, inclusive no rush" },
   { node: <Counter to={0} />, label: "apps para o seu cliente instalar" },
   { node: <Counter to={3} />, label: "passos do cardápio ao primeiro pedido" },
-  { node: <Counter to={149} prefix="R$ " />, label: "por mês, plano único por número de WhatsApp" },
+  { node: <Counter to={49.9} prefix="R$ " decimals={2} />, label: "por mês, plano único por número de WhatsApp" },
 ];
 
 const INTEGRATIONS: { label: string; icon: ReactNode }[] = [

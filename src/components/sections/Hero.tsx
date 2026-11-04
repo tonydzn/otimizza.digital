@@ -12,7 +12,7 @@ import { BarChart3, Bell, CheckCheck, ChefHat, Check } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Section";
 import { WhatsAppIcon } from "@/components/ui/Icons";
-import { LINKS, EASE } from "@/lib/content";
+import { LINKS, EASE, PRICE_LABEL } from "@/lib/content";
 
 /* ------------------------------------------------------------------ */
 /* Conversation script (mirrors the real Cardápio IA demo)            */
@@ -375,7 +375,7 @@ const rise: Variants = {
 const TRUST = [
   "Sem app para o cliente baixar",
   "No número que você já usa",
-  "R$ 149/mês, plano único",
+  `${PRICE_LABEL}/mês, plano único`,
 ];
 
 export function Hero() {

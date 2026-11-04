@@ -163,7 +163,7 @@ function Calculator_() {
               <strong className="text-white">
                 {ordersToPay} {ordersToPay === 1 ? "pedido" : "pedidos"} por mês
               </strong>{" "}
-              já pagam os {brl(BRAND.price)} do plano.
+              já pagam os {brl(BRAND.price, 2)} do plano.
             </p>
           </div>
         </div>
@@ -213,9 +213,9 @@ export function Pricing() {
                   <span className="text-2xl font-bold text-muted sm:text-3xl">R$</span>
                   <span className="relative inline-block text-7xl font-extrabold leading-[0.85] tracking-tighter tabular-nums sm:text-8xl">
                     {/* invisible real value reserves width (and is what screen readers read) */}
-                    <span className="invisible">{BRAND.price}</span>
+                    <span className="invisible">{BRAND.price.toLocaleString("pt-BR", { minimumFractionDigits: 2 })}</span>
                     <span aria-hidden="true" className="absolute inset-0 text-left">
-                      <Counter to={BRAND.price} duration={1.4} />
+                      <Counter to={BRAND.price} duration={1.4} decimals={2} />
                     </span>
                   </span>
                   <span className="pb-1 text-lg font-semibold text-muted">/mês</span>

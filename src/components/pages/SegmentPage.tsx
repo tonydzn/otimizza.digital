@@ -64,7 +64,7 @@ function SegmentHero({ s }: { s: Segment }) {
             </Button>
           </div>
           <ul className="mt-7 flex flex-col items-center gap-x-6 gap-y-2 text-sm font-medium text-muted sm:flex-row sm:flex-wrap sm:justify-center lg:justify-start">
-            {["Sem app para o cliente", "No número que você já usa", `${brl(BRAND.price)}/mês, plano único`].map((t) => (
+            {["Sem app para o cliente", "No número que você já usa", `${brl(BRAND.price, 2)}/mês, plano único`].map((t) => (
               <li key={t} className="inline-flex items-center gap-2">
                 <span className="grid size-5 place-items-center rounded-full bg-brand-100 text-brand-700">
                   <Check className="size-3" strokeWidth={3} aria-hidden="true" />

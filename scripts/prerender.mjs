@@ -60,7 +60,7 @@ for (const s of SEGMENTS) {
         areaServed: { "@type": "Country", name: "Brasil" },
         audience: { "@type": "BusinessAudience", audienceType: s.plural },
         isRelatedTo: { "@id": `${ORIGIN}/#software` },
-        offers: { "@type": "Offer", price: "149.00", priceCurrency: "BRL", url: `${url}#precos`, description: "Plano único por número de WhatsApp, pagamento mensal." },
+        offers: { "@type": "Offer", price: "49.90", priceCurrency: "BRL", url: `${url}#precos`, description: "Plano único por número de WhatsApp, pagamento mensal." },
       },
     ],
   };
