@@ -336,9 +336,6 @@ function HeroDemo() {
               <span className="inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-subtle">
                 <BarChart3 className="size-3.5 text-brand-600" aria-hidden="true" /> Resumo de hoje
               </span>
-              <span className="rounded-full bg-ink/5 px-2 py-0.5 text-[10px] font-medium text-subtle">
-                exemplo
-              </span>
             </div>
             <p className="mt-2 font-display text-2xl font-extrabold leading-none tabular-nums text-ink">
               38 pedidos

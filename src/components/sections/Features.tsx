@@ -116,12 +116,12 @@ export function Features() {
                   <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-br from-brand-100 to-sun-100/60 blur-2xl transition-opacity duration-500 group-hover:opacity-100 sm:opacity-70" />
                   <img
                     src={menu}
-                    alt="Ilustração: mão segurando celular com cardápio digital de lanche, pizza, açaí e marmita."
+                    alt="Mão segurando o celular com uma conversa de WhatsApp mostrando fotos de hambúrguer e pizza do cardápio."
                     width={700}
                     height={928}
                     loading="lazy"
                     decoding="async"
-                    className="w-full rounded-3xl border border-line bg-white object-cover transition-transform duration-700 ease-out group-hover:-rotate-2 group-hover:scale-[1.03]"
+                    className="aspect-[700/928] w-full rounded-3xl border border-line bg-white object-cover transition-transform duration-700 ease-out group-hover:-rotate-2 group-hover:scale-[1.03]"
                   />
                 </div>
               </div>
@@ -171,9 +171,9 @@ export function Features() {
               <div className="relative overflow-hidden rounded-3xl border border-line bg-white">
                 <img
                   src={motoboy}
-                  alt="Ilustração: entregador de moto com mochila térmica verde deixando um rastro de balões de mensagem."
-                  width={700}
-                  height={700}
+                  alt="Entregador de moto com mochila térmica verde numa rua da cidade ao entardecer."
+                  width={1200}
+                  height={750}
                   loading="lazy"
                   decoding="async"
                   className="aspect-[16/10] w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
@@ -205,7 +205,7 @@ export function Features() {
                   <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-br from-sun-100/70 to-brand-100 blur-2xl sm:opacity-70" />
                   <img
                     src={dona}
-                    alt="Ilustração: dona de restaurante sentada à mesa no fim do expediente, olhando um gráfico no celular, com café e um gato dormindo na cadeira ao lado."
+                    alt="Dona de restaurante sentada à mesa depois de fechar, sorrindo enquanto olha o resumo do dia no celular, com um café ao lado."
                     width={700}
                     height={869}
                     loading="lazy"
@@ -232,9 +232,6 @@ export function Features() {
               <div className="rounded-2xl border border-line bg-paper/60 p-5">
                 <p className="flex items-center justify-between text-xs font-semibold uppercase tracking-wider text-subtle">
                   Mais vendidos hoje
-                  <span className="rounded-full bg-ink/5 px-2 py-0.5 text-[10px] normal-case tracking-normal">
-                    exemplo
-                  </span>
                 </p>
                 <ul className="mt-4 space-y-3.5">
                   {TOP_ITEMS.map((item, i) => (

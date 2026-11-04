@@ -172,6 +172,12 @@ export function Footer() {
             />
           </a>
         </div>
+
+        <p className="mt-6 text-center text-xs leading-relaxed text-subtle sm:text-left">
+          Imagens, conversas, números e situações exibidos no site são ilustrativos. Algumas imagens
+          foram geradas com inteligência artificial. Os resultados variam conforme a operação de
+          cada negócio.
+        </p>
       </Container>
     </footer>
   );
