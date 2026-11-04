@@ -125,13 +125,8 @@ export function Navbar() {
               <LogIn className="size-4 text-brand-700" aria-hidden="true" />
               Acessar
             </a>
-            <Button
-              href={LINKS.start}
-              size="md"
-              icon={<WhatsAppIcon className="size-[18px]" />}
-              className="hidden h-10 sm:inline-flex"
-            >
-              Falar no WhatsApp
+            <Button href={LINKS.signup} size="md" className="hidden h-10 sm:inline-flex">
+              Teste grátis
             </Button>
 
             <button

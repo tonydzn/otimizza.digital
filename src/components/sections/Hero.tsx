@@ -452,8 +452,8 @@ export function Hero() {
             variants={rise}
             className="mt-9 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center lg:justify-start"
           >
-            <Button href={LINKS.start} size="lg" icon={<WhatsAppIcon />} arrow>
-              Quero o Cardápio IA
+            <Button href={LINKS.signup} size="lg" arrow>
+              Testar grátis por 7 dias
             </Button>
             <Button href={LINKS.test} size="lg" variant="secondary">
               Testar a IA no WhatsApp

@@ -21,6 +21,7 @@ export const LINKS = {
   question: waLink("Olá! Tenho uma dúvida sobre o Cardápio IA."),
   demoMenu: "https://app.otimizza.digital/m/demo",
   login: "https://app.otimizza.digital/",
+  signup: "https://app.otimizza.digital/cadastro",
 } as const;
 
 export const NAV_ITEMS = [

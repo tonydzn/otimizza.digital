@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { Button } from "@/components/ui/Button";
-import { WhatsAppIcon } from "@/components/ui/Icons";
 import { BRAND, EASE, LINKS, brl } from "@/lib/content";
 
 /** Sticky bottom conversion bar for phones. Hides while the lead form is on screen. */
@@ -44,8 +43,8 @@ export function MobileCTA() {
               <span className="block font-display text-sm font-extrabold text-ink">Cardápio IA</span>
               <span className="text-xs text-muted">{brl(BRAND.price, 2)}/mês · plano único</span>
             </p>
-            <Button href={LINKS.start} icon={<WhatsAppIcon className="size-[18px]" />} className="h-11">
-              Falar agora
+            <Button href={LINKS.signup} className="h-11">
+              Teste grátis
             </Button>
           </div>
         </motion.div>

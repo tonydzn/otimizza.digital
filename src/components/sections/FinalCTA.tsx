@@ -330,8 +330,8 @@ export function FinalCTA({ defaultType }: { defaultType?: string } = {}) {
             </Reveal>
             <Reveal delay={0.32}>
               <div className="mt-9 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center lg:justify-start">
-                <Button href={LINKS.start} variant="glow" size="lg" icon={<WhatsAppIcon />} arrow>
-                  Falar com a gente no WhatsApp
+                <Button href={LINKS.signup} variant="glow" size="lg" arrow>
+                  Testar grátis por 7 dias
                 </Button>
                 <a
                   href={LINKS.test}

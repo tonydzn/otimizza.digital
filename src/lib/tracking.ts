@@ -59,15 +59,19 @@ export function resetConsent() {
   window.dispatchEvent(new Event(CONSENT_RESET_EVENT));
 }
 
-/** Cliques em links de WhatsApp viram eventos no dataLayer.
+/** Cliques em links de WhatsApp e no teste grátis viram eventos no dataLayer.
  *  O número de teste da IA manda `bot_teste_click`, que NÃO deve virar conversão no Meta. */
 export function initClickTracking() {
   const onClick = (event: MouseEvent) => {
     const link = (event.target as Element | null)?.closest?.<HTMLAnchorElement>(
-      'a[href*="wa.me/"], a[href*="api.whatsapp.com"]'
+      'a[href*="wa.me/"], a[href*="api.whatsapp.com"], a[href*="app.otimizza.digital/cadastro"]'
     );
     if (!link) return;
     try {
+      if (link.href.includes("/cadastro")) {
+        dl().push({ event: "signup_click", content_name: "Teste grátis", link_text: (link.textContent || "").trim().slice(0, 80), page_path: location.pathname });
+        return;
+      }
       const teste = link.href.includes(WA_TEST);
       dl().push({
         event: teste ? "bot_teste_click" : "whatsapp_click",

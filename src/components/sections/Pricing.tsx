@@ -4,7 +4,6 @@ import { Calculator, Check, Info, Sparkles } from "lucide-react";
 import { Container, SectionHeader } from "@/components/ui/Section";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
-import { WhatsAppIcon } from "@/components/ui/Icons";
 import { Counter } from "@/components/ui/Counter";
 import { BRAND, LINKS, brl } from "@/lib/content";
 
@@ -238,18 +237,16 @@ export function Pricing() {
                   ))}
                 </Stagger>
 
-                <Button
-                  href={LINKS.start}
-                  size="lg"
-                  icon={<WhatsAppIcon />}
-                  arrow
-                  className="mt-9 w-full"
-                >
-                  Quero o Cardápio IA
+                <Button href={LINKS.signup} size="lg" arrow className="mt-9 w-full">
+                  Começar 7 dias grátis
                 </Button>
                 <p className="mt-4 text-center text-[0.82rem] leading-relaxed text-subtle">
-                  O botão abre uma conversa no WhatsApp com a Otimizza Digital. Fidelidade e taxa de
-                  instalação são combinadas por lá.
+                  Sem cartão: crie a conta, conecte o WhatsApp e teste. Depois, {brl(BRAND.price, 2)}/mês
+                  no Pix. Prefere ajuda para configurar?{" "}
+                  <a href={LINKS.start} target="_blank" rel="noopener noreferrer" className="font-semibold text-brand-700 underline underline-offset-2">
+                    Fale com a gente no WhatsApp
+                  </a>
+                  .
                 </p>
               </div>
             </div>
