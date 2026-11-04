@@ -118,7 +118,7 @@ export function BeforeAfter() {
               <div className="relative h-full min-h-[280px] overflow-hidden rounded-[1.5rem] bg-white">
                 <img
                   src={rush}
-                  alt="Ilustração de uma lanchonete no horário de pico: chapeiro trabalhando, atendente entregando uma sacola, fila de clientes e mochila de entrega no balcão."
+                  alt="Lanchonete lotada à noite: chapeiro na chapa, atendente entregando uma sacola no balcão, fila de clientes no celular e mochila de entrega sobre o balcão."
                   width={1200}
                   height={755}
                   loading="lazy"
@@ -221,7 +221,7 @@ export function BeforeAfter() {
         </div>
 
         <p className="mt-6 text-center text-xs text-subtle">
-          Cenário ilustrativo de uma noite de lanchonete. Não são dados de clientes.
+          Imagem ilustrativa gerada por IA de uma noite de lanchonete. Não são dados de clientes.
         </p>
       </Container>
     </section>
