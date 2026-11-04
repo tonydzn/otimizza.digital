@@ -82,7 +82,7 @@ function SegmentHero({ s }: { s: Segment }) {
             width={360}
             height={360}
             fetchPriority="high"
-            className="absolute -right-3 -top-12 z-10 w-28 rotate-6 rounded-3xl border border-line bg-white p-1.5 shadow-lift sm:-right-8 sm:w-36"
+            className="absolute -right-3 -top-12 z-10 aspect-square w-28 rotate-6 rounded-3xl border-4 border-white object-cover shadow-lift sm:-right-8 sm:w-36"
           />
           <div className="rounded-[2rem] border border-line bg-white p-3 shadow-lift">
             <div className="flex items-center gap-3 px-2 pb-3 pt-1">
@@ -178,7 +178,7 @@ function OtherSegments({ s }: { s: Segment }) {
                 href={`/${o.slug}/`}
                 className="group flex items-center gap-4 rounded-3xl border border-line bg-white p-4 transition-all hover:-translate-y-0.5 hover:border-brand-200 hover:shadow-soft"
               >
-                <img src={o.img} alt="" width={64} height={64} loading="lazy" decoding="async" className="size-14 shrink-0" />
+                <img src={o.img} alt="" width={64} height={64} loading="lazy" decoding="async" className="size-14 shrink-0 rounded-2xl object-cover" />
                 <span>
                   <span className="block font-display font-bold text-ink">{o.label}</span>
                   <span className="text-sm text-muted">Atendimento no WhatsApp para {o.plural}</span>

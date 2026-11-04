@@ -55,7 +55,7 @@ export const SEGMENTS: Segment[] = [
       "Sexta à noite o WhatsApp não para, e cada pedido tem sabor, tamanho, meio a meio e borda. O Cardápio IA responde todo mundo na hora, anota tudo certinho e manda o pedido para a cozinha, no número que a sua pizzaria já usa.",
     waText: "Olá! Tenho uma pizzaria e quero o Cardápio IA. Pode me explicar como funciona?",
     img: pizza,
-    imgAlt: "Ilustração de uma pizza na caixa aberta com uma fatia levantada.",
+    imgAlt: "Foto de uma pizza com tomate, azeitona e manjericão na caixa de entrega.",
     chat: [
       { from: "user", text: "Boa noite! Quero uma pizza grande meio calabresa meio portuguesa" },
       { from: "ai", text: "Boa noite! Anotado: 1 pizza grande, meio calabresa e meio portuguesa. Quer borda recheada?" },
@@ -103,7 +103,7 @@ export const SEGMENTS: Segment[] = [
       "X-bacon sem cebola, cheddar extra, batata grande e a bebida. O Cardápio IA anota cada detalhe, mostra a foto do lanche, confirma endereço e pagamento e manda tudo para a chapa, no número da sua hamburgueria ou lanchonete.",
     waText: "Olá! Tenho uma hamburgueria e quero o Cardápio IA. Pode me explicar como funciona?",
     img: lanche,
-    imgAlt: "Ilustração de um hambúrguer com queijo, alface e tomate.",
+    imgAlt: "Foto de um X-bacon com cheddar e batata frita numa tábua de madeira.",
     chat: [
       { from: "user", text: "Quero 2 xbacon, um sem cebola" },
       { from: "ai", text: "Anotado: 2 X-Bacon, um deles sem cebola. Quer batata ou bebida para acompanhar?" },
@@ -151,7 +151,7 @@ export const SEGMENTS: Segment[] = [
       "Das 10h ao meio-dia todo mundo pergunta “qual a marmita de hoje?”. O Cardápio IA responde com o cardápio do dia, anota tamanho e prato, respeita o seu horário de corte e organiza as entregas, enquanto a cozinha monta as marmitas.",
     waText: "Olá! Tenho uma marmitaria e quero o Cardápio IA. Pode me explicar como funciona?",
     img: marmita,
-    imgAlt: "Ilustração de uma marmita com arroz, feijão, bife e salada.",
+    imgAlt: "Foto de uma marmita para entrega com arroz, frango grelhado, brócolis e tomate.",
     chat: [
       { from: "user", text: "Bom dia! Qual a marmita de hoje?" },
       { from: "ai", text: "Bom dia! Hoje tem bife acebolado e frango grelhado, com arroz, feijão e salada. Prefere a P ou a G?" },
@@ -199,7 +199,7 @@ export const SEGMENTS: Segment[] = [
       "Tamanho, cinco acompanhamentos, dois adicionais e uma calda. O Cardápio IA anota cada copo do jeito que o cliente pediu, soma os adicionais, avisa quando um item acabou e manda tudo para o balcão, no número da sua açaiteria.",
     waText: "Olá! Tenho uma açaiteria e quero o Cardápio IA. Pode me explicar como funciona?",
     img: acai,
-    imgAlt: "Ilustração de uma tigela de açaí com banana, granola e morango.",
+    imgAlt: "Foto de um copo de açaí com morango, banana e mirtilo.",
     chat: [
       { from: "user", text: "Quero um açaí de 500 com banana, granola e leite ninho" },
       { from: "ai", text: "Anotado: açaí 500 ml com banana, granola e leite Ninho. Quer mais algum adicional?" },

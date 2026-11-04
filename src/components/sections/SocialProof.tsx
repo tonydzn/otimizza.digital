@@ -48,10 +48,10 @@ const INTEGRATIONS: { label: string; icon: ReactNode }[] = [
 ];
 
 const CARDS = [
-  { href: "/hamburgueria/", title: "Lanchonetes", text: "Lanches, porções e combos com observação por item.", img: lanche, alt: "Ilustração de um hambúrguer com queijo, alface e tomate." },
-  { href: "/pizzaria/", title: "Pizzarias", text: "Sabores, tamanhos, meio a meio e borda recheada.", img: pizza, alt: "Ilustração de uma pizza na caixa aberta com uma fatia levantada." },
-  { href: "/marmitaria/", title: "Marmitarias", text: "Cardápio do dia, tamanhos e horário de corte dos pedidos.", img: marmita, alt: "Ilustração de uma marmita com arroz, feijão, bife e salada." },
-  { href: "/acaiteria/", title: "Açaiterias", text: "Tamanhos, acompanhamentos e adicionais sem confusão.", img: acai, alt: "Ilustração de uma tigela de açaí com banana, granola e morango." },
+  { href: "/hamburgueria/", title: "Lanchonetes", text: "Lanches, porções e combos com observação por item.", img: lanche, alt: "Foto de um X-bacon com cheddar e batata frita numa tábua de madeira." },
+  { href: "/pizzaria/", title: "Pizzarias", text: "Sabores, tamanhos, meio a meio e borda recheada.", img: pizza, alt: "Foto de uma pizza com tomate, azeitona e manjericão na caixa de entrega." },
+  { href: "/marmitaria/", title: "Marmitarias", text: "Cardápio do dia, tamanhos e horário de corte dos pedidos.", img: marmita, alt: "Foto de uma marmita para entrega com arroz, frango grelhado, brócolis e tomate." },
+  { href: "/acaiteria/", title: "Açaiterias", text: "Tamanhos, acompanhamentos e adicionais sem confusão.", img: acai, alt: "Foto de um copo de açaí com morango, banana e mirtilo." },
 ];
 
 function Chip({ label, Icon }: { label: string; Icon: LucideIcon }) {
