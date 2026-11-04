@@ -220,7 +220,7 @@ export function Features() {
                     No fim da noite, um resumo dos pedidos, dos itens mais vendidos e das perguntas
                     que a IA não soube responder.
                   </CardText>
-                  <MiniChat className="mt-6" label="resumo de hoje · exemplo simulado">
+                  <MiniChat className="mt-6" label="resumo de hoje">
                     <MiniBubble from="ai">
                       <strong>38 pedidos, R$ 1.812.</strong> Mais vendido: X-Bacon (41). 2 perguntas
                       ficaram para você responder.

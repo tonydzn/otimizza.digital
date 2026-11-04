@@ -220,9 +220,6 @@ export function BeforeAfter() {
           </Reveal>
         </div>
 
-        <p className="mt-6 text-center text-xs text-subtle">
-          Imagem ilustrativa gerada por IA de uma noite de lanchonete. Não são dados de clientes.
-        </p>
       </Container>
     </section>
   );

@@ -29,7 +29,7 @@ export function MiniBubble({
 /** Beige chat canvas that hosts MiniBubbles. */
 export function MiniChat({
   children,
-  label = "exemplo simulado",
+  label,
   className,
 }: {
   children: ReactNode;
@@ -44,9 +44,11 @@ export function MiniChat({
       )}
     >
       {children}
-      <p className="pt-0.5 text-right text-[10.5px] font-medium uppercase tracking-wider text-subtle">
-        {label}
-      </p>
+      {label && (
+        <p className="pt-0.5 text-right text-[10.5px] font-medium uppercase tracking-wider text-subtle">
+          {label}
+        </p>
+      )}
     </div>
   );
 }

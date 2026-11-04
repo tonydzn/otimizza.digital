@@ -8,7 +8,7 @@ import {
   useTransform,
   type Variants,
 } from "motion/react";
-import { BarChart3, Bell, CheckCheck, ChefHat, Check, Sparkles } from "lucide-react";
+import { BarChart3, Bell, CheckCheck, ChefHat, Check } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Section";
 import { WhatsAppIcon } from "@/components/ui/Icons";
@@ -281,7 +281,7 @@ function HeroDemo() {
         >
           <PhoneChat count={count} typing={typing} cycle={cycle} />
           <p className="sr-only">
-            Demonstração simulada: o cliente pede 2 X-Bacon e 1 batata no WhatsApp, a IA anota o
+            Demonstração: o cliente pede 2 X-Bacon e 1 batata no WhatsApp, a IA anota o
             pedido, confirma endereço e pagamento e envia o pedido número 128 para a cozinha.
           </p>
         </motion.div>
@@ -359,10 +359,6 @@ function HeroDemo() {
         </motion.div>
       </motion.div>
 
-      <p className="mt-8 flex items-center justify-center gap-2 text-xs text-subtle">
-        <Sparkles className="size-3.5 text-brand-600" aria-hidden="true" />
-        Demonstração simulada · restaurante fictício
-      </p>
     </div>
   );
 }

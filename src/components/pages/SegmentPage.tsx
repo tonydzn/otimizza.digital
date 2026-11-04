@@ -94,7 +94,7 @@ function SegmentHero({ s }: { s: Segment }) {
                 <p className="text-xs text-subtle">Cardápio IA · responde na hora</p>
               </div>
             </div>
-            <MiniChat label="conversa simulada · negócio fictício">
+            <MiniChat>
               {s.chat.map((b, i) => (
                 <MiniBubble key={i} from={b.from}>
                   {b.text}
