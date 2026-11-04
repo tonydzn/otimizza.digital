@@ -21,13 +21,14 @@ export function SubHeader() {
             Guia
           </a>
           <a
-            href="https://app.otimizza.digital/login"
+            href={LINKS.login}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 rounded-full px-3 py-2 text-sm font-medium text-muted transition-colors hover:text-ink"
+            aria-label="Acessar o painel do Cardápio IA (abre em nova aba)"
+            className="inline-flex h-10 items-center gap-2 rounded-full border border-line bg-white/70 px-4 text-sm font-semibold text-ink transition-all hover:-translate-y-0.5 hover:border-brand-300 hover:bg-white"
           >
-            <LogIn className="size-4" aria-hidden="true" />
-            Entrar
+            <LogIn className="size-4 text-brand-700" aria-hidden="true" />
+            Acessar
           </a>
           <a
             href={LINKS.start}

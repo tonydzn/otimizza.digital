@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useScroll, useSpring } from "motion/react";
-import { Menu, X } from "lucide-react";
+import { LogIn, Menu, X } from "lucide-react";
 import { Logo, WhatsAppIcon } from "@/components/ui/Icons";
 import { Button } from "@/components/ui/Button";
 import { LINKS, NAV_ITEMS, EASE } from "@/lib/content";
@@ -114,7 +114,17 @@ export function Navbar() {
             })}
           </ul>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1 sm:gap-2">
+            <a
+              href={LINKS.login}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Acessar o painel do Cardápio IA (abre em nova aba)"
+              className="inline-flex h-10 items-center gap-2 rounded-full border border-line bg-white/70 px-4 text-[0.92rem] font-semibold text-ink transition-all hover:-translate-y-0.5 hover:border-brand-300 hover:bg-white"
+            >
+              <LogIn className="size-4 text-brand-700" aria-hidden="true" />
+              Acessar
+            </a>
             <Button
               href={LINKS.start}
               size="md"
@@ -200,6 +210,16 @@ export function Navbar() {
                   onClick={() => setOpen(false)}
                 >
                   Testar a IA no WhatsApp
+                </Button>
+                <Button
+                  href={LINKS.login}
+                  variant="secondary"
+                  size="lg"
+                  icon={<LogIn className="size-[18px]" />}
+                  className="w-full"
+                  onClick={() => setOpen(false)}
+                >
+                  Acessar o painel
                 </Button>
               </div>
             </motion.div>

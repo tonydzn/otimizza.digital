@@ -20,6 +20,7 @@ export const LINKS = {
   test: waLink("Oi! Quero ver o cardápio", WA_TEST),
   question: waLink("Olá! Tenho uma dúvida sobre o Cardápio IA."),
   demoMenu: "https://app.otimizza.digital/m/demo",
+  login: "https://app.otimizza.digital/",
 } as const;
 
 export const NAV_ITEMS = [

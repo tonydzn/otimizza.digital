@@ -65,12 +65,12 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="https://app.otimizza.digital/login"
+                  href={LINKS.login}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted underline-offset-4 transition-colors hover:text-brand-700 hover:underline"
                 >
-                  Entrar no painel
+                  Acessar o painel
                 </a>
               </li>
             </ul>
