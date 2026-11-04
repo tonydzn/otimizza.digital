@@ -19,6 +19,12 @@ function googleTagManager(): Plugin {
     transformIndexHtml: () => [
       { tag: "script", children: consent, injectTo: "head-prepend" },
       { tag: "script", children: gtm, injectTo: "head-prepend" },
+      // sem JavaScript (alguns robôs de busca e de IA), o conteúdo animado aparece direto
+      {
+        tag: "noscript",
+        children: `<style>[style*="opacity:0"]{opacity:1!important;transform:none!important;filter:none!important}</style>`,
+        injectTo: "head",
+      },
       {
         tag: "noscript",
         children: `<iframe src="https://www.googletagmanager.com/ns.html?id=${GTM_ID}" height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
@@ -43,6 +49,10 @@ export default defineConfig({
         privacidade: path.resolve(__dirname, "privacidade/index.html"),
         ajuda: path.resolve(__dirname, "ajuda/index.html"),
         notFound: path.resolve(__dirname, "404.html"),
+        pizzaria: path.resolve(__dirname, "pizzaria/index.html"),
+        hamburgueria: path.resolve(__dirname, "hamburgueria/index.html"),
+        marmitaria: path.resolve(__dirname, "marmitaria/index.html"),
+        acaiteria: path.resolve(__dirname, "acaiteria/index.html"),
       },
     },
   },

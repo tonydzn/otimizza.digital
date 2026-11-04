@@ -48,10 +48,10 @@ const INTEGRATIONS: { label: string; icon: ReactNode }[] = [
 ];
 
 const CARDS = [
-  { title: "Lanchonetes", text: "Lanches, porções e combos com observação por item.", img: lanche, alt: "Ilustração de um hambúrguer com queijo, alface e tomate." },
-  { title: "Pizzarias", text: "Sabores, tamanhos, meio a meio e borda recheada.", img: pizza, alt: "Ilustração de uma pizza na caixa aberta com uma fatia levantada." },
-  { title: "Marmitarias", text: "Cardápio do dia, tamanhos e horário de corte dos pedidos.", img: marmita, alt: "Ilustração de uma marmita com arroz, feijão, bife e salada." },
-  { title: "Açaiterias", text: "Tamanhos, acompanhamentos e adicionais sem confusão.", img: acai, alt: "Ilustração de uma tigela de açaí com banana, granola e morango." },
+  { href: "/hamburgueria/", title: "Lanchonetes", text: "Lanches, porções e combos com observação por item.", img: lanche, alt: "Ilustração de um hambúrguer com queijo, alface e tomate." },
+  { href: "/pizzaria/", title: "Pizzarias", text: "Sabores, tamanhos, meio a meio e borda recheada.", img: pizza, alt: "Ilustração de uma pizza na caixa aberta com uma fatia levantada." },
+  { href: "/marmitaria/", title: "Marmitarias", text: "Cardápio do dia, tamanhos e horário de corte dos pedidos.", img: marmita, alt: "Ilustração de uma marmita com arroz, feijão, bife e salada." },
+  { href: "/acaiteria/", title: "Açaiterias", text: "Tamanhos, acompanhamentos e adicionais sem confusão.", img: acai, alt: "Ilustração de uma tigela de açaí com banana, granola e morango." },
 ];
 
 function Chip({ label, Icon }: { label: string; Icon: LucideIcon }) {
@@ -139,7 +139,10 @@ export function SocialProof() {
         <Stagger className="mt-14 grid grid-cols-2 gap-4 sm:mt-20 lg:grid-cols-4 lg:gap-5">
           {CARDS.map((c) => (
             <StaggerItem key={c.title} as="article">
-              <div className="group h-full overflow-hidden rounded-3xl border border-line bg-white p-3 transition-all duration-500 hover:-translate-y-1.5 hover:shadow-lift sm:p-4">
+              <a
+                href={c.href}
+                className="group block h-full overflow-hidden rounded-3xl border border-line bg-white p-3 transition-all duration-500 hover:-translate-y-1.5 hover:shadow-lift sm:p-4"
+              >
                 <div className="overflow-hidden rounded-2xl bg-white">
                   <img
                     src={c.img}
@@ -155,7 +158,10 @@ export function SocialProof() {
                   {c.title}
                 </h3>
                 <p className="mt-1.5 px-1 pb-1 text-[0.92rem] leading-snug text-muted">{c.text}</p>
-              </div>
+                <span className="mt-2 inline-flex items-center gap-1 px-1 pb-1 text-sm font-semibold text-brand-700">
+                  Ver como funciona <span aria-hidden="true">→</span>
+                </span>
+              </a>
             </StaggerItem>
           ))}
         </Stagger>

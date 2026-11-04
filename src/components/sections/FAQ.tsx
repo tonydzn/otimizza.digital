@@ -1,4 +1,4 @@
-import { useId, useState } from "react";
+import { useId, useState, type ReactNode } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { Plus } from "lucide-react";
 import { Container, SectionHeader } from "@/components/ui/Section";
@@ -84,13 +84,18 @@ function Item({
   );
 }
 
-export function FAQ() {
+type FaqItem = { q: string; a: string };
+
+export function FAQ({
+  items = FAQ_ITEMS,
+  title,
+}: { items?: readonly FaqItem[]; title?: ReactNode } = {}) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: FAQ_ITEMS.map((f) => ({
+    mainEntity: items.map((f) => ({
       "@type": "Question",
       name: f.q,
       acceptedAnswer: { "@type": "Answer", text: f.a },
@@ -108,10 +113,12 @@ export function FAQ() {
               align="left"
               eyebrow="Dúvidas"
               title={
-                <>
-                  Perguntas de quem{" "}
-                  <span className="text-gradient-brand">está no balcão.</span>
-                </>
+                title ?? (
+                  <>
+                    Perguntas de quem{" "}
+                    <span className="text-gradient-brand">está no balcão.</span>
+                  </>
+                )
               }
               description="Não achou a sua? Chama no WhatsApp e pergunta direto."
             />
@@ -123,7 +130,7 @@ export function FAQ() {
           </div>
 
           <Stagger className="grid grid-cols-1 gap-3" stagger={0.06}>
-            {FAQ_ITEMS.map((f, i) => (
+            {items.map((f, i) => (
               <StaggerItem key={f.q}>
                 <Item
                   q={f.q}

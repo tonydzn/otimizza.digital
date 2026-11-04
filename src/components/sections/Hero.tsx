@@ -410,7 +410,7 @@ export function Hero() {
                 </span>
                 Novo
               </span>
-              Atendente de WhatsApp com IA para lanchonetes
+              Atendimento automático no WhatsApp para restaurantes e lanchonetes
               <span aria-hidden="true" className="transition-transform group-hover:translate-x-0.5">
                 →
               </span>
@@ -449,8 +449,9 @@ export function Hero() {
             variants={rise}
             className="mx-auto mt-7 max-w-xl text-[1.08rem] leading-relaxed text-muted sm:text-xl lg:mx-0"
           >
-            O Cardápio IA responde na hora, mostra o cardápio com fotos, anota o pedido, confirma
-            endereço e pagamento e manda tudo para o painel da cozinha.{" "}
+            O Cardápio IA é um atendente com inteligência artificial que responde na hora, mostra o
+            cardápio com fotos, anota o pedido, confirma endereço e pagamento e manda tudo para o
+            painel da cozinha.{" "}
             <span className="font-semibold text-ink">No número da sua lanchonete, 24 horas por dia.</span>
           </motion.p>
 

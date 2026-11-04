@@ -81,4 +81,8 @@ export const FAQ_ITEMS = [
     q: "Atende fora de Presidente Prudente?",
     a: "Sim. O Cardápio IA funciona em qualquer cidade do Brasil, porque tudo acontece no WhatsApp e no painel online. A implantação é feita à distância.",
   },
+  {
+    q: "O Cardápio IA é um chatbot ou robô de WhatsApp?",
+    a: "É um atendente com inteligência artificial, mas não é aquele robô de menu com “digite 1”. O cliente escreve ou manda áudio do jeito dele e a IA entende, mostra o cardápio digital com fotos e anota o pedido. Quando precisa, passa a conversa para uma pessoa da equipe.",
+  },
 ] as const;

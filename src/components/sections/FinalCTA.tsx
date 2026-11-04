@@ -42,7 +42,7 @@ function validate(v: Values): Errors {
   if (v.name.trim().length < 2) e.name = "Como podemos te chamar?";
   const digits = v.phone.replace(/\D/g, "");
   if (digits.length < 10) e.phone = "Informe um WhatsApp com DDD, ex.: (18) 98186-8701";
-  if (v.business.trim().length < 2) e.business = "Qual o nome da sua lanchonete?";
+  if (v.business.trim().length < 2) e.business = "Qual o nome do seu negócio?";
   return e;
 }
 
@@ -89,8 +89,8 @@ function Field({
   );
 }
 
-function LeadForm() {
-  const [values, setValues] = useState<Values>({ name: "", phone: "", business: "", type: "Lanchonete" });
+function LeadForm({ defaultType = "Lanchonete" }: { defaultType?: string }) {
+  const [values, setValues] = useState<Values>({ name: "", phone: "", business: "", type: defaultType });
   const [errors, setErrors] = useState<Errors>({});
   const [sent, setSent] = useState<string | null>(null);
   const refs = {
@@ -217,14 +217,14 @@ function LeadForm() {
               </Field>
 
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-[1.3fr_1fr]">
-                <Field id="business" label="Nome da lanchonete" error={errors.business}>
+                <Field id="business" label="Nome do negócio" error={errors.business}>
                   <input
                     ref={refs.business}
                     id="business"
                     name="business"
                     type="text"
                     autoComplete="organization"
-                    placeholder="Nome da lanchonete"
+                    placeholder="Nome do negócio"
                     required
                     value={values.business}
                     onChange={(e) => set("business", e.target.value)}
@@ -279,7 +279,7 @@ function LeadForm() {
   );
 }
 
-export function FinalCTA() {
+export function FinalCTA({ defaultType }: { defaultType?: string } = {}) {
   return (
     <section
       id="contato"
@@ -351,7 +351,7 @@ export function FinalCTA() {
           </div>
 
           <Reveal delay={0.15} x={24}>
-            <LeadForm />
+            <LeadForm defaultType={defaultType} />
           </Reveal>
         </div>
       </Container>

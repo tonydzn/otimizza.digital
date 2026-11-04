@@ -4,6 +4,7 @@ import { Logo, WhatsAppIcon } from "@/components/ui/Icons";
 import { BRAND, LINKS, NAV_ITEMS } from "@/lib/content";
 import { resetConsent } from "@/lib/tracking";
 import { PRIVACY_URL } from "@/components/ui/CookieNotice";
+import { SEGMENTS } from "@/lib/segments";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -11,7 +12,7 @@ export function Footer() {
   return (
     <footer className="relative pb-28 pt-16 md:pb-10">
       <Container>
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
+        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
             <Logo />
             <p className="mt-5 max-w-sm text-[0.95rem] leading-relaxed text-muted">
@@ -72,6 +73,24 @@ export function Footer() {
                   Entrar no painel
                 </a>
               </li>
+            </ul>
+          </nav>
+
+          <nav aria-label="Para o seu negócio">
+            <p className="font-display text-sm font-bold uppercase tracking-wider text-ink">
+              Para o seu negócio
+            </p>
+            <ul className="mt-5 space-y-3 text-[0.95rem]">
+              {SEGMENTS.map((s) => (
+                <li key={s.slug}>
+                  <a
+                    href={`/${s.slug}/`}
+                    className="text-muted underline-offset-4 transition-colors hover:text-brand-700 hover:underline"
+                  >
+                    WhatsApp para {s.label.toLowerCase()}
+                  </a>
+                </li>
+              ))}
             </ul>
           </nav>
 

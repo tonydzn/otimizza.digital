@@ -15,6 +15,10 @@
 ## Páginas
 
 - [Página do Cardápio IA](https://otimizza.digital/): o que faz, telas do painel, plano e perguntas frequentes.
+- [Cardápio IA para pizzarias](https://otimizza.digital/pizzaria/): meio a meio, tamanhos, bordas, taxa por bairro.
+- [Cardápio IA para hamburguerias e lanchonetes](https://otimizza.digital/hamburgueria/): adicionais, observação por item, apelidos dos lanches.
+- [Cardápio IA para marmitarias](https://otimizza.digital/marmitaria/): cardápio do dia, horário de corte, entregas do almoço.
+- [Cardápio IA para açaiterias](https://otimizza.digital/acaiteria/): tamanhos, acompanhamentos, adicionais e itens esgotados.
 - [Guia de implantação](https://otimizza.digital/ajuda/): passo a passo para colocar no ar em uma tarde.
 - [Privacidade](https://otimizza.digital/privacidade/)
 
